@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Breeds - Fur & Learn</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <h1 class="logo">🐱 Fur & Learn</h1>
+        <button class="mobile-toggle" onclick="toggleNav()" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-menu">
+          <li><a href="Catphotoapp.html">Home</a></li>
+          <li><a href="breeds.html">Breeds</a></li>
+          <li><a href="care-tips.html">Care Tips</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="Catphotoapp.html">🏠 Home</a> / <span>Breeds</span>
+      </nav>
+
+      <section class="hero-section">
+        <h1>Popular Cat Breeds</h1>
+        <p>Discover the unique characteristics of different cat breeds</p>
+      </section>
+
+      <section>
+        <div class="breed-gallery">
+          <div class="breed-item">
+            <img src="Breeds/Tabby.jpg" alt="Tabby cat with striped pattern" class="breed-image">
+            <h2>Tabby</h2>
+            <p><strong>Origin:</strong> Various</p>
+            <p><strong>Characteristics:</strong> Distinctive striped or spotted patterns, playful, affectionate, intelligent</p>
+            <p><strong>Temperament:</strong> Energetic and social, enjoy playtime and interaction</p>
+            <p><strong>Care Level:</strong> Moderate</p>
+            <p><strong>Life Span:</strong> 12-18 years</p>
+          </div>
+
+          <div class="breed-item">
+            <img src="Breeds/Siamese.jpeg" alt="Siamese cat with blue eyes" class="breed-image">
+            <h2>Siamese</h2>
+            <p><strong>Origin:</strong> Thailand</p>
+            <p><strong>Characteristics:</strong> Striking blue eyes, color-point coat, vocal, social, highly intelligent</p>
+            <p><strong>Temperament:</strong> Demanding of attention, very vocal, form strong bonds with owners</p>
+            <p><strong>Care Level:</strong> Moderate to High</p>
+            <p><strong>Life Span:</strong> 8-15 years</p>
+          </div>
+
+          <div class="breed-item">
+            <img src="Breeds/Persian.jpg" alt="Persian cat with long fluffy coat" class="breed-image">
+            <h2>Persian</h2>
+            <p><strong>Origin:</strong> Iran</p>
+            <p><strong>Characteristics:</strong> Luxurious long coat, flat face, calm, gentle, requires grooming</p>
+            <p><strong>Temperament:</strong> Calm and gentle, prefer quiet environments, less active</p>
+            <p><strong>Care Level:</strong> High (grooming intensive)</p>
+            <p><strong>Life Span:</strong> 8-15 years</p>
+          </div>
+
+          <div class="breed-item">
+            <img src="Breeds/Bengal.jpeg" alt="Bengal cat with leopard-like spots" class="breed-image">
+            <h2>Bengal</h2>
+            <p><strong>Origin:</strong> United States</p>
+            <p><strong>Characteristics:</strong> Wild appearance with leopard-like spots, highly active, athletic</p>
+            <p><strong>Temperament:</strong> Very active and playful, love to climb and explore, need stimulation</p>
+            <p><strong>Care Level:</strong> High</p>
+            <p><strong>Life Span:</strong> 10-16 years</p>
+          </div>
+
+          <div class="breed-item">
+            <img src="Breeds/Maine.jpg" alt="Maine Coon cat - large and fluffy" class="breed-image">
+            <h2>Maine Coon</h2>
+            <p><strong>Origin:</strong> Maine, USA</p>
+            <p><strong>Characteristics:</strong> Large size, fluffy coat, friendly, intelligent, dog-like personality</p>
+            <p><strong>Temperament:</strong> Gentle giants, sociable, good with families, enjoy interaction</p>
+            <p><strong>Care Level:</strong> Moderate (grooming needed)</p>
+            <p><strong>Life Span:</strong> 12-18 years</p>
+          </div>
+
+          <div class="breed-item">
+            <img src="Breeds/Scottish.jpeg" alt="Scottish Fold with distinctive folded ears" class="breed-image">
+            <h2>Scottish Fold</h2>
+            <p><strong>Origin:</strong> Scotland</p>
+            <p><strong>Characteristics:</strong> Distinctive folded ears, round face, calm, affectionate</p>
+            <p><strong>Temperament:</strong> Sweet and gentle, enjoy human company, quiet and calm</p>
+            <p><strong>Care Level:</strong> Moderate</p>
+            <p><strong>Life Span:</strong> 11-15 years</p>
+          </div>
+
+          <div class="breed-item">
+            <img src="Breeds/Russian.jpg" alt="Russian Blue with silver coat and green eyes" class="breed-image">
+            <h2>Russian Blue</h2>
+            <p><strong>Origin:</strong> Russia</p>
+            <p><strong>Characteristics:</strong> Silver-blue coat, green eyes, elegant, shy but loving</p>
+            <p><strong>Temperament:</strong> Reserved with strangers, very affectionate with family, enjoy quiet</p>
+            <p><strong>Care Level:</strong> Low to Moderate</p>
+            <p><strong>Life Span:</strong> 12-17 years</p>
+          </div>
+
+          <div class="breed-item">
+            <img src="Breeds/Ragdoll.webp" alt="Ragdoll cat with blue eyes and color-point coat" class="breed-image">
+            <h2>Ragdoll</h2>
+            <p><strong>Origin:</strong> United States</p>
+            <p><strong>Characteristics:</strong> Large blue eyes, color-point coat, relaxed, gentle, calm</p>
+            <p><strong>Temperament:</strong> Very docile and relaxed, enjoy being held, get along well with families</p>
+            <p><strong>Care Level:</strong> Moderate (grooming needed)</p>
+            <p><strong>Life Span:</strong> 12-17 years</p>
+          </div>
+
+          <div class="breed-item">
+            <img src="Breeds/Sphynx.webp" alt="Sphynx hairless cat" class="breed-image">
+            <h2>Sphynx</h2>
+            <p><strong>Origin:</strong> Canada</p>
+            <p><strong>Characteristics:</strong> Hairless, wrinkled skin, large ears, energetic, affectionate</p>
+            <p><strong>Temperament:</strong> Highly social, loves attention, playful, demands interaction</p>
+            <p><strong>Care Level:</strong> High (requires regular baths and skin care)</p>
+            <p><strong>Life Span:</strong> 8-14 years</p>
+          </div>
+
+          <div class="breed-item">
+            <img src="Breeds/British.jpeg" alt="British Shorthair cat" class="breed-image">
+            <h2>British Shorthair</h2>
+            <p><strong>Origin:</strong> United Kingdom</p>
+            <p><strong>Characteristics:</strong> Stocky build, round face, dense short coat, calm, quiet</p>
+            <p><strong>Temperament:</strong> Independent but affectionate, enjoy quiet environments, dignified</p>
+            <p><strong>Care Level:</strong> Low to Moderate</p>
+            <p><strong>Life Span:</strong> 12-17 years</p>
+          </div>
+
+          <div class="breed-item">
+            <img src="Breeds/ABYSSINIAN.webp" alt="Abyssinian cat" class="breed-image">
+            <h2>Abyssinian</h2>
+            <p><strong>Origin:</strong> Egypt</p>
+            <p><strong>Characteristics:</strong> Slender frame, distinctive ticked coat, large ears, active, intelligent</p>
+            <p><strong>Temperament:</strong> Highly energetic, love to climb and play, require plenty of stimulation</p>
+            <p><strong>Care Level:</strong> Moderate</p>
+            <p><strong>Life Span:</strong> 9-15 years</p>
+          </div>
+
+          <div class="breed-item">
+            <img src="Breeds/Burmese.jpeg" alt="Burmese cat" class="breed-image">
+            <h2>Burmese</h2>
+            <p><strong>Origin:</strong> Myanmar (Burma)</p>
+            <p><strong>Characteristics:</strong> Silky coat, muscular build, golden or sable coloring, affectionate</p>
+            <p><strong>Temperament:</strong> Very social and people-oriented, demanding of attention, vocal</p>
+            <p><strong>Care Level:</strong> Low to Moderate</p>
+            <p><strong>Life Span:</strong> 10-17 years</p>
+          </div>
+
+          <div class="breed-item">
+            <img src="Breeds/Manx.jpeg" alt="Manx tailless cat" class="breed-image">
+            <h2>Manx</h2>
+            <p><strong>Origin:</strong> Isle of Man</p>
+            <p><strong>Characteristics:</strong> Characteristic lack of tail, sturdy build, excellent jumpers, intelligent</p>
+            <p><strong>Temperament:</strong> Playful and loyal, enjoy interaction, dog-like personality</p>
+            <p><strong>Care Level:</strong> Moderate</p>
+            <p><strong>Life Span:</strong> 8-14 years</p>
+          </div>
+
+        </div>
+      </section>
+
+      <section>
+        <h2>Choosing the Right Breed</h2>
+        <div class="guide-grid">
+          <div class="guide-card">
+            <h3>👥 Active Families</h3>
+            <p>If you have an active household with plenty of interaction, consider Bengal, Maine Coon, or Tabby breeds. These cats love playtime and stimulation.</p>
+          </div>
+          <div class="guide-card">
+            <h3>🤫 Quiet Homes</h3>
+            <p>For peaceful environments, Russian Blue, Scottish Fold, or Persian cats are excellent choices. They prefer calm, stable homes.</p>
+          </div>
+          <div class="guide-card">
+            <h3>💬 Social Cats</h3>
+            <p>If you want a vocal, interactive cat, Siamese and Maine Coons are known for their chatty personalities and strong bonds with owners.</p>
+          </div>
+          <div class="guide-card">
+            <h3>✋ Low Maintenance</h3>
+            <p>For busy schedules, Tabby cats and Russian Blues require less grooming and adapt well to various living situations.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Health Considerations by Breed</h2>
+        <p>Different breeds have specific health concerns. Here's what you should know:</p>
+        <ul>
+          <li><strong>Siamese:</strong> Prone to respiratory issues and crossed eyes</li>
+          <li><strong>Persian:</strong> Facial structure can cause breathing problems; require professional grooming</li>
+          <li><strong>Maine Coon:</strong> Watch for hip dysplasia and heart conditions</li>
+          <li><strong>Bengal:</strong> Generally healthy; ensure proper socialization</li>
+          <li><strong>Scottish Fold:</strong> Ear infections due to folded ears; monitor regularly</li>
+          <li><strong>Ragdoll:</strong> Prone to kidney disease; regular vet checkups recommended</li>
+        </ul>
+        <p style="margin-top: 20px;"><strong>Pro Tip:</strong> Always adopt from reputable breeders or rescue organizations. Regular veterinary care is essential for all breeds!</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-top">
+        <div class="footer-newsletter">
+          <h4>🐱 Join Our Community</h4>
+          <p>Get exclusive cat content, tips, and adorable photos delivered to your inbox!</p>
+          <form class="footer-newsletter-form" id="footer-newsletter-form">
+            <input type="email" placeholder="Your email..." required aria-label="Email for newsletter">
+            <button type="submit">Subscribe</button>
+          </form>
+          <small>No spam. Just purr-fect content! 😸</small>
+        </div>
+      </div>
+
+      <div class="footer-middle">
+        <div class="footer-info">
+          <div class="info-box">
+            <h5>📧 Email</h5>
+            <a href="mailto:contact@catphotoapp.com">contact@catphotoapp.com</a>
+          </div>
+          <div class="info-box">
+            <h5>📞 Phone</h5>
+            <a href="tel:+15551234567">+1 (555) 123-4567</a>
+          </div>
+          <div class="info-box">
+            <h5>🕐 Hours</h5>
+            <p>Mon-Fri: 9am-5pm<br>Weekends: Closed</p>
+          </div>
+          <div class="info-box">
+            <h5>📍 Location</h5>
+            <p>123 Cat Street<br>Whisker City, CA 90210</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2026 Fur & Learn. All rights reserved. | Created with <span style="color: #ff6b6b;">❤️</span> for cat lovers worldwide</p>
+          <p class="footer-tagline">🐱 Learning about cats, one paw at a time 🐱</p>
+          <p class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a> | 
+            <a href="terms-of-service.html">Terms of Service</a> | 
+            <a href="contact.html">Contact</a> | 
+            <a href="about.html">About</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" onclick="scrollToTop()" aria-label="Back to top">↑ Top</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

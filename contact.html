@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Fur & Learn</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <h1 class="logo">🐱 Fur & Learn</h1>
+        <button class="mobile-toggle" onclick="toggleNav()" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-menu">
+          <li><a href="Catphotoapp.html">Home</a></li>
+          <li><a href="breeds.html">Breeds</a></li>
+          <li><a href="care-tips.html">Care Tips</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="Catphotoapp.html">🏠 Home</a> / <span>Contact</span>
+      </nav>
+
+      <section class="hero-section">
+        <h1>Get in Touch</h1>
+        <p>We'd love to hear from you! Send us your photos, feedback, or questions</p>
+      </section>
+
+      <section class="contact-section">
+        <h2>Contact Form</h2>
+        <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+        
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required aria-label="Your name">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required aria-label="Your email address">
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required aria-label="Subject of your message">
+          </div>
+          
+          <div class="form-group">
+            <label for="cat-type">Favorite Cat Type:</label>
+            <select id="cat-type" name="cat-type" aria-label="Your favorite cat type">
+              <option value="">-- Select --</option>
+              <option value="tabby">Tabby</option>
+              <option value="siamese">Siamese</option>
+              <option value="persian">Persian</option>
+              <option value="bengal">Bengal</option>
+              <option value="maine-coon">Maine Coon</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required aria-label="Your message"></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label for="photo-share">
+              <input type="checkbox" id="photo-share" name="photo-share">
+              I would like to share cat photos for the gallery
+            </label>
+          </div>
+          
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Other Ways to Reach Us</h2>
+        <div class="contact-methods">
+          <div class="contact-card">
+            <h3>📧 Email</h3>
+            <p>contact@catphotoapp.com</p>
+          </div>
+
+          <div class="contact-card">
+            <h3>📞 Phone</h3>
+            <p>+1 (555) 123-4567</p>
+          </div>
+
+          <div class="contact-card">
+            <h3>📍 Address</h3>
+            <p>123 Cat Street<br>Whisker City, CA 90210</p>
+          </div>
+
+          <div class="contact-card">
+            <h3>🕐 Hours</h3>
+            <p>Monday - Friday: 9am - 5pm<br>Saturday - Sunday: Closed</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Follow Us on Social Media</h2>
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">📷 Instagram</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">👍 Facebook</a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">🐦 Twitter</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">▶️ YouTube</a>
+        </div>
+      </section>
+
+      <section>
+        <h2>FAQ</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <h3 onclick="toggleFaq(this)">How quickly do you respond to messages? ▼</h3>
+            <div class="faq-answer" style="display: none;">
+              <p>We try to respond to all messages within 24-48 hours. For urgent matters, please call us directly during business hours (9am-5pm, Monday-Friday).</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 onclick="toggleFaq(this)">Can I submit cat photos for the gallery? ▼</h3>
+            <div class="faq-answer" style="display: none;">
+              <p>Yes! We'd love to feature your cat photos. Fill out the contact form and check the "photo sharing" option, or email your high-resolution photos directly to contact@catphotoapp.com. Include your cat's name and a brief description.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 onclick="toggleFaq(this)">Do you offer professional veterinary services? ▼</h3>
+            <div class="faq-answer" style="display: none;">
+              <p>We provide educational information and resources for cat owners. For professional veterinary services, health advice, or medical concerns, please consult with a licensed veterinarian in your area.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 onclick="toggleFaq(this)">Can I use the photos on this site for my own purposes? ▼</h3>
+            <div class="faq-answer" style="display: none;">
+              <p>All photos on our site are used for educational and entertainment purposes. Please contact us before using any photos for commercial purposes or outside of CatPhotoApp.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 onclick="toggleFaq(this)">How can I report inaccurate information? ▼</h3>
+            <div class="faq-answer" style="display: none;">
+              <p>We strive for accuracy in all our content. If you find any incorrect information, please let us know via the contact form or by emailing contact@catphotoapp.com with details.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 onclick="toggleFaq(this)">Do you have a newsletter? ▼</h3>
+            <div class="faq-answer" style="display: none;">
+              <p>Yes! Subscribe to our newsletter on the home page to receive weekly cat tips, adorable photos, and exclusive content directly to your inbox.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 onclick="toggleFaq(this)">How do I adopt a cat? ▼</h3>
+            <div class="faq-answer" style="display: none;">
+              <p>We're not a rescue organization, but we can provide resources and breed information to help you choose the right cat. Contact your local animal shelter or cat rescue organization to adopt!</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 onclick="toggleFaq(this)">Is there an app version of CatPhotoApp? ▼</h3>
+            <div class="faq-answer" style="display: none;">
+              <p>Currently, CatPhotoApp is a web-based platform that works on all devices. Follow us on social media for updates about future app developments!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter-cta">
+        <h2>Stay Connected!</h2>
+        <p>Subscribe to our newsletter for weekly cat tips, adorable photos, and exclusive content.</p>
+        <form id="newsletter-form" class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required aria-label="Email for newsletter">
+          <button type="submit">Subscribe Now</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-top">
+        <div class="footer-newsletter">
+          <h4>🐱 Join Our Community</h4>
+          <p>Get exclusive cat content, tips, and adorable photos delivered to your inbox!</p>
+          <form class="footer-newsletter-form" id="footer-newsletter-form">
+            <input type="email" placeholder="Your email..." required aria-label="Email for newsletter">
+            <button type="submit">Subscribe</button>
+          </form>
+          <small>No spam. Just purr-fect content! 😸</small>
+        </div>
+      </div>
+
+      <div class="footer-middle">
+        <div class="footer-info">
+          <div class="info-box">
+            <h5>📧 Email</h5>
+            <a href="mailto:contact@catphotoapp.com">contact@catphotoapp.com</a>
+          </div>
+          <div class="info-box">
+            <h5>📞 Phone</h5>
+            <a href="tel:+15551234567">+1 (555) 123-4567</a>
+          </div>
+          <div class="info-box">
+            <h5>🕐 Hours</h5>
+            <p>Mon-Fri: 9am-5pm<br>Weekends: Closed</p>
+          </div>
+          <div class="info-box">
+            <h5>📍 Location</h5>
+            <p>123 Cat Street<br>Whisker City, CA 90210</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2026 Fur & Learn. All rights reserved. | Created with <span style="color: #ff6b6b;">❤️</span> for cat lovers worldwide</p>
+          <p class="footer-tagline">🐱 Learning about cats, one paw at a time 🐱</p>
+          <p class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a> | 
+            <a href="terms-of-service.html">Terms of Service</a> | 
+            <a href="contact.html">Contact</a> | 
+            <a href="about.html">About</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" onclick="scrollToTop()" aria-label="Back to top">↑ Top</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
