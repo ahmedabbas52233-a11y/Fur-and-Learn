@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore 13 cat breeds with interactive 3D flip cards. Compare breeds, filter by trait, and find your perfect match.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='80' font-size='80'%3E🐱%3C/text%3E%3C/svg%3E">
+  <title>Cat Breeds – Fur &amp; Learn</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="particles-bg" aria-hidden="true"></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">🐱 Fur &amp; Learn</div>
+    <button class="mobile-toggle" onclick="toggleNav()" aria-label="Menu">☰</button>
+    <ul class="nav-menu">
+      <li><a href="Catphotoapp.html">Home</a></li>
+      <li><a href="breeds.html" class="active">Breeds</a></li>
+      <li><a href="care-tips.html">Care Tips</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="quiz.html">Breed Quiz</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="themeBtn" class="theme-toggle" onclick="toggleTheme()">☀️</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <nav class="breadcrumb"><a href="Catphotoapp.html">🏠 Home</a> / <span>Breeds</span></nav>
+
+  <section class="page-hero" aria-label="Breeds">
+    <div class="section-tag">🧬 Breed Profiles</div>
+    <h1>Discover 13 Cat Breeds</h1>
+    <p>Click any card to flip it and reveal detailed traits. Search, filter, and compare — all in one place.</p>
+  </section>
+
+  <!-- Search & Filter -->
+  <section class="section" style="padding-top:1rem;padding-bottom:2rem">
+    <div class="section-inner">
+      <div class="search-wrap reveal">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="breedSearch" placeholder="Search breeds by name or trait…" aria-label="Search breeds">
+      </div>
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All Breeds</button>
+        <button class="filter-btn" data-filter="active">High Energy</button>
+        <button class="filter-btn" data-filter="calm">Calm</button>
+        <button class="filter-btn" data-filter="family">Family-Friendly</button>
+        <button class="filter-btn" data-filter="quiet">Quiet</button>
+        <button class="filter-btn" data-filter="low-groom">Low Grooming</button>
+        <button class="filter-btn" data-filter="indoor">Indoor</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breed Grid -->
+  <section class="section" style="padding-top:0">
+    <div class="section-inner">
+      <div class="breed-grid">
+
+        <!-- Tabby -->
+        <div class="breed-card reveal" data-name="tabby" data-tags="active family moderate low-groom">
+          <div class="breed-card-inner">
+            <div class="breed-front">
+              <img src="Breeds/Tabby.jpg" alt="Tabby cat">
+              <div class="breed-front-info">
+                <h3>Tabby</h3>
+                <p class="origin">🌍 Various Origins</p>
+                <div class="breed-care">
+                  <span class="badge badge-teal">Family-Friendly</span>
+                  <span class="badge badge-gold">Moderate Care</span>
+                </div>
+                <span class="flip-hint">Click to flip ↩</span>
+              </div>
+            </div>
+            <div class="breed-back">
+              <h3>Tabby</h3>
+              <div class="breed-stat-row"><span>Origin</span><span>Various</span></div>
+              <div class="breed-stat-row"><span>Lifespan</span><span>12–18 yrs</span></div>
+              <div class="breed-stat-row"><span>Energy</span><div class="trait-bar"><div class="trait-fill" style="width:80%"></div></div></div>
+              <div class="breed-stat-row"><span>Social</span><div class="trait-bar"><div class="trait-fill" style="width:80%"></div></div></div>
+              <div class="breed-stat-row"><span>Grooming</span><div class="trait-bar"><div class="trait-fill" style="width:40%"></div></div></div>
+              <p style="font-size:0.86rem;color:var(--cream-dim);margin-top:0.8rem">Distinctive striped patterns, playful, affectionate, and highly adaptable — a timeless favourite.</p>
+              <a href="quiz.html" class="btn btn-teal btn-sm" style="margin-top:1rem">Is this your match?</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Siamese -->
+        <div class="breed-card reveal reveal-delay-1" data-name="siamese" data-tags="active social vocal">
+          <div class="breed-card-inner">
+            <div class="breed-front">
+              <img src="Breeds/Siamese.jpeg" alt="Siamese cat">
+              <div class="breed-front-info">
+                <h3>Siamese</h3>
+                <p class="origin">🌏 Thailand</p>
+                <div class="breed-care">
+                  <span class="badge badge-rose">Very Vocal</span>
+                  <span class="badge badge-gold">Moderate-High Care</span>
+                </div>
+                <span class="flip-hint">Click to flip ↩</span>
+              </div>
+            </div>
+            <div class="breed-back">
+              <h3>Siamese</h3>
+              <div class="breed-stat-row"><span>Origin</span><span>Thailand</span></div>
+              <div class="breed-stat-row"><span>Lifespan</span><span>8–15 yrs</span></div>
+              <div class="breed-stat-row"><span>Energy</span><div class="trait-bar"><div class="trait-fill" style="width:80%"></div></div></div>
+              <div class="breed-stat-row"><span>Social</span><div class="trait-bar"><div class="trait-fill" style="width:100%"></div></div></div>
+              <div class="breed-stat-row"><span>Grooming</span><div class="trait-bar"><div class="trait-fill" style="width:40%"></div></div></div>
+              <p style="font-size:0.86rem;color:var(--cream-dim);margin-top:0.8rem">Striking blue eyes, demanding attention and conversation. Forms deep, powerful bonds with owners.</p>
+              <a href="quiz.html" class="btn btn-teal btn-sm" style="margin-top:1rem">Is this your match?</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Persian -->
+        <div class="breed-card reveal reveal-delay-2" data-name="persian" data-tags="calm quiet indoor high-groom">
+          <div class="breed-card-inner">
+            <div class="breed-front">
+              <img src="Breeds/Persian.jpg" alt="Persian cat">
+              <div class="breed-front-info">
+                <h3>Persian</h3>
+                <p class="origin">🌍 Iran</p>
+                <div class="breed-care">
+                  <span class="badge badge-teal">Calm & Gentle</span>
+                  <span class="badge badge-rose">Daily Grooming</span>
+                </div>
+                <span class="flip-hint">Click to flip ↩</span>
+              </div>
+            </div>
+            <div class="breed-back">
+              <h3>Persian</h3>
+              <div class="breed-stat-row"><span>Origin</span><span>Iran</span></div>
+              <div class="breed-stat-row"><span>Lifespan</span><span>8–15 yrs</span></div>
+              <div class="breed-stat-row"><span>Energy</span><div class="trait-bar"><div class="trait-fill" style="width:20%"></div></div></div>
+              <div class="breed-stat-row"><span>Social</span><div class="trait-bar"><div class="trait-fill" style="width:60%"></div></div></div>
+              <div class="breed-stat-row"><span>Grooming</span><div class="trait-bar"><div class="trait-fill" style="width:100%"></div></div></div>
+              <p style="font-size:0.86rem;color:var(--cream-dim);margin-top:0.8rem">Luxurious long coat, flat expressive face, and an unmatched serenity. The ultimate lap cat.</p>
+              <a href="quiz.html" class="btn btn-teal btn-sm" style="margin-top:1rem">Is this your match?</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bengal -->
+        <div class="breed-card reveal" data-name="bengal" data-tags="active energetic large">
+          <div class="breed-card-inner">
+            <div class="breed-front">
+              <img src="Breeds/Bengal.jpeg" alt="Bengal cat">
+              <div class="breed-front-info">
+                <h3>Bengal</h3>
+                <p class="origin">🌎 USA</p>
+                <div class="breed-care">
+                  <span class="badge badge-rose">High Energy</span>
+                  <span class="badge badge-gold">High Care</span>
+                </div>
+                <span class="flip-hint">Click to flip ↩</span>
+              </div>
+            </div>
+            <div class="breed-back">
+              <h3>Bengal</h3>
+              <div class="breed-stat-row"><span>Origin</span><span>United States</span></div>
+              <div class="breed-stat-row"><span>Lifespan</span><span>10–16 yrs</span></div>
+              <div class="breed-stat-row"><span>Energy</span><div class="trait-bar"><div class="trait-fill" style="width:100%"></div></div></div>
+              <div class="breed-stat-row"><span>Social</span><div class="trait-bar"><div class="trait-fill" style="width:80%"></div></div></div>
+              <div class="breed-stat-row"><span>Grooming</span><div class="trait-bar"><div class="trait-fill" style="width:40%"></div></div></div>
+              <p style="font-size:0.86rem;color:var(--cream-dim);margin-top:0.8rem">Wild leopard-like spots, athletic build, and an insatiable appetite for adventure and play.</p>
+              <a href="quiz.html" class="btn btn-teal btn-sm" style="margin-top:1rem">Is this your match?</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Maine Coon -->
+        <div class="breed-card reveal reveal-delay-1" data-name="maine coon" data-tags="family active large social">
+          <div class="breed-card-inner">
+            <div class="breed-front">
+              <img src="Breeds/Maine.jpg" alt="Maine Coon">
+              <div class="breed-front-info">
+                <h3>Maine Coon</h3>
+                <p class="origin">🌎 Maine, USA</p>
+                <div class="breed-care">
+                  <span class="badge badge-teal">Family-Friendly</span>
+                  <span class="badge badge-gold">Moderate Care</span>
+                </div>
+                <span class="flip-hint">Click to flip ↩</span>
+              </div>
+            </div>
+            <div class="breed-back">
+              <h3>Maine Coon</h3>
+              <div class="breed-stat-row"><span>Origin</span><span>Maine, USA</span></div>
+              <div class="breed-stat-row"><span>Lifespan</span><span>12–18 yrs</span></div>
+              <div class="breed-stat-row"><span>Energy</span><div class="trait-bar"><div class="trait-fill" style="width:60%"></div></div></div>
+              <div class="breed-stat-row"><span>Social</span><div class="trait-bar"><div class="trait-fill" style="width:100%"></div></div></div>
+              <div class="breed-stat-row"><span>Grooming</span><div class="trait-bar"><div class="trait-fill" style="width:80%"></div></div></div>
+              <p style="font-size:0.86rem;color:var(--cream-dim);margin-top:0.8rem">Gentle giants. Dog-like loyalty, sociable with everyone, and one of the most affectionate breeds alive.</p>
+              <a href="quiz.html" class="btn btn-teal btn-sm" style="margin-top:1rem">Is this your match?</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scottish Fold -->
+        <div class="breed-card reveal reveal-delay-2" data-name="scottish fold" data-tags="calm family quiet moderate">
+          <div class="breed-card-inner">
+            <div class="breed-front">
+              <img src="Breeds/Scottish.jpeg" alt="Scottish Fold">
+              <div class="breed-front-info">
+                <h3>Scottish Fold</h3>
+                <p class="origin">🌍 Scotland</p>
+                <div class="breed-care">
+                  <span class="badge badge-teal">Gentle</span>
+                  <span class="badge badge-gold">Moderate Care</span>
+                </div>
+                <span class="flip-hint">Click to flip ↩</span>
+              </div>
+            </div>
+            <div class="breed-back">
+              <h3>Scottish Fold</h3>
+              <div class="breed-stat-row"><span>Origin</span><span>Scotland</span></div>
+              <div class="breed-stat-row"><span>Lifespan</span><span>11–15 yrs</span></div>
+              <div class="breed-stat-row"><span>Energy</span><div class="trait-bar"><div class="trait-fill" style="width:60%"></div></div></div>
+              <div class="breed-stat-row"><span>Social</span><div class="trait-bar"><div class="trait-fill" style="width:80%"></div></div></div>
+              <div class="breed-stat-row"><span>Grooming</span><div class="trait-bar"><div class="trait-fill" style="width:60%"></div></div></div>
+              <p style="font-size:0.86rem;color:var(--cream-dim);margin-top:0.8rem">Iconic folded ears, round wide eyes, and the sweetest most adaptable temperament imaginable.</p>
+              <a href="quiz.html" class="btn btn-teal btn-sm" style="margin-top:1rem">Is this your match?</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Russian Blue -->
+        <div class="breed-card reveal" data-name="russian blue" data-tags="quiet calm indoor low-groom independent">
+          <div class="breed-card-inner">
+            <div class="breed-front">
+              <img src="Breeds/Russian.jpg" alt="Russian Blue">
+              <div class="breed-front-info">
+                <h3>Russian Blue</h3>
+                <p class="origin">🌍 Russia</p>
+                <div class="breed-care">
+                  <span class="badge badge-teal">Low Maintenance</span>
+                  <span class="badge badge-gold">Low Care</span>
+                </div>
+                <span class="flip-hint">Click to flip ↩</span>
+              </div>
+            </div>
+            <div class="breed-back">
+              <h3>Russian Blue</h3>
+              <div class="breed-stat-row"><span>Origin</span><span>Russia</span></div>
+              <div class="breed-stat-row"><span>Lifespan</span><span>12–17 yrs</span></div>
+              <div class="breed-stat-row"><span>Energy</span><div class="trait-bar"><div class="trait-fill" style="width:60%"></div></div></div>
+              <div class="breed-stat-row"><span>Social</span><div class="trait-bar"><div class="trait-fill" style="width:60%"></div></div></div>
+              <div class="breed-stat-row"><span>Grooming</span><div class="trait-bar"><div class="trait-fill" style="width:40%"></div></div></div>
+              <p style="font-size:0.86rem;color:var(--cream-dim);margin-top:0.8rem">Silver-blue elegance, vivid green eyes. Reserved with strangers but deeply loving with family.</p>
+              <a href="quiz.html" class="btn btn-teal btn-sm" style="margin-top:1rem">Is this your match?</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ragdoll -->
+        <div class="breed-card reveal reveal-delay-1" data-name="ragdoll" data-tags="calm family indoor social moderate">
+          <div class="breed-card-inner">
+            <div class="breed-front">
+              <img src="Breeds/Ragdoll.webp" alt="Ragdoll cat">
+              <div class="breed-front-info">
+                <h3>Ragdoll</h3>
+                <p class="origin">🌎 USA</p>
+                <div class="breed-care">
+                  <span class="badge badge-teal">Ultra-Docile</span>
+                  <span class="badge badge-gold">Moderate Care</span>
+                </div>
+                <span class="flip-hint">Click to flip ↩</span>
+              </div>
+            </div>
+            <div class="breed-back">
+              <h3>Ragdoll</h3>
+              <div class="breed-stat-row"><span>Origin</span><span>United States</span></div>
+              <div class="breed-stat-row"><span>Lifespan</span><span>12–17 yrs</span></div>
+              <div class="breed-stat-row"><span>Energy</span><div class="trait-bar"><div class="trait-fill" style="width:40%"></div></div></div>
+              <div class="breed-stat-row"><span>Social</span><div class="trait-bar"><div class="trait-fill" style="width:100%"></div></div></div>
+              <div class="breed-stat-row"><span>Grooming</span><div class="trait-bar"><div class="trait-fill" style="width:60%"></div></div></div>
+              <p style="font-size:0.86rem;color:var(--cream-dim);margin-top:0.8rem">Goes completely limp when held. Silky, blue-eyed, and the most relaxed cat breed in existence.</p>
+              <a href="quiz.html" class="btn btn-teal btn-sm" style="margin-top:1rem">Is this your match?</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sphynx -->
+        <div class="breed-card reveal reveal-delay-2" data-name="sphynx" data-tags="active social energetic">
+          <div class="breed-card-inner">
+            <div class="breed-front">
+              <img src="Breeds/Sphynx.webp" alt="Sphynx cat">
+              <div class="breed-front-info">
+                <h3>Sphynx</h3>
+                <p class="origin">🌎 Canada</p>
+                <div class="breed-care">
+                  <span class="badge badge-rose">Attention-Seeker</span>
+                  <span class="badge badge-gold">High Care</span>
+                </div>
+                <span class="flip-hint">Click to flip ↩</span>
+              </div>
+            </div>
+            <div class="breed-back">
+              <h3>Sphynx</h3>
+              <div class="breed-stat-row"><span>Origin</span><span>Canada</span></div>
+              <div class="breed-stat-row"><span>Lifespan</span><span>8–14 yrs</span></div>
+              <div class="breed-stat-row"><span>Energy</span><div class="trait-bar"><div class="trait-fill" style="width:80%"></div></div></div>
+              <div class="breed-stat-row"><span>Social</span><div class="trait-bar"><div class="trait-fill" style="width:100%"></div></div></div>
+              <div class="breed-stat-row"><span>Grooming</span><div class="trait-bar"><div class="trait-fill" style="width:80%"></div></div></div>
+              <p style="font-size:0.86rem;color:var(--cream-dim);margin-top:0.8rem">Hairless and warm-bodied, dramatic and devoted. Requires weekly skin care but rewards with limitless love.</p>
+              <a href="quiz.html" class="btn btn-teal btn-sm" style="margin-top:1rem">Is this your match?</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- British Shorthair -->
+        <div class="breed-card reveal" data-name="british shorthair" data-tags="calm quiet independent low-groom">
+          <div class="breed-card-inner">
+            <div class="breed-front">
+              <img src="Breeds/British.jpeg" alt="British Shorthair">
+              <div class="breed-front-info">
+                <h3>British Shorthair</h3>
+                <p class="origin">🌍 United Kingdom</p>
+                <div class="breed-care">
+                  <span class="badge badge-teal">Easy-Going</span>
+                  <span class="badge badge-gold">Low Care</span>
+                </div>
+                <span class="flip-hint">Click to flip ↩</span>
+              </div>
+            </div>
+            <div class="breed-back">
+              <h3>British Shorthair</h3>
+              <div class="breed-stat-row"><span>Origin</span><span>United Kingdom</span></div>
+              <div class="breed-stat-row"><span>Lifespan</span><span>12–17 yrs</span></div>
+              <div class="breed-stat-row"><span>Energy</span><div class="trait-bar"><div class="trait-fill" style="width:40%"></div></div></div>
+              <div class="breed-stat-row"><span>Social</span><div class="trait-bar"><div class="trait-fill" style="width:60%"></div></div></div>
+              <div class="breed-stat-row"><span>Grooming</span><div class="trait-bar"><div class="trait-fill" style="width:40%"></div></div></div>
+              <p style="font-size:0.86rem;color:var(--cream-dim);margin-top:0.8rem">Stocky, dignified, and quietly affectionate. Thrives in settled households with calm routines.</p>
+              <a href="quiz.html" class="btn btn-teal btn-sm" style="margin-top:1rem">Is this your match?</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Abyssinian -->
+        <div class="breed-card reveal reveal-delay-1" data-name="abyssinian" data-tags="active energetic low-groom">
+          <div class="breed-card-inner">
+            <div class="breed-front">
+              <img src="Breeds/ABYSSINIAN.webp" alt="Abyssinian cat">
+              <div class="breed-front-info">
+                <h3>Abyssinian</h3>
+                <p class="origin">🌍 Egypt</p>
+                <div class="breed-care">
+                  <span class="badge badge-rose">Very Active</span>
+                  <span class="badge badge-gold">Moderate Care</span>
+                </div>
+                <span class="flip-hint">Click to flip ↩</span>
+              </div>
+            </div>
+            <div class="breed-back">
+              <h3>Abyssinian</h3>
+              <div class="breed-stat-row"><span>Origin</span><span>Egypt</span></div>
+              <div class="breed-stat-row"><span>Lifespan</span><span>9–15 yrs</span></div>
+              <div class="breed-stat-row"><span>Energy</span><div class="trait-bar"><div class="trait-fill" style="width:100%"></div></div></div>
+              <div class="breed-stat-row"><span>Social</span><div class="trait-bar"><div class="trait-fill" style="width:80%"></div></div></div>
+              <div class="breed-stat-row"><span>Grooming</span><div class="trait-bar"><div class="trait-fill" style="width:40%"></div></div></div>
+              <p style="font-size:0.86rem;color:var(--cream-dim);margin-top:0.8rem">Ticked golden coat, enormous ears, and boundless curiosity. Never stops exploring and playing.</p>
+              <a href="quiz.html" class="btn btn-teal btn-sm" style="margin-top:1rem">Is this your match?</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Burmese -->
+        <div class="breed-card reveal reveal-delay-2" data-name="burmese" data-tags="social family active low-groom">
+          <div class="breed-card-inner">
+            <div class="breed-front">
+              <img src="Breeds/Burmese.jpeg" alt="Burmese cat">
+              <div class="breed-front-info">
+                <h3>Burmese</h3>
+                <p class="origin">🌏 Myanmar</p>
+                <div class="breed-care">
+                  <span class="badge badge-teal">People-Oriented</span>
+                  <span class="badge badge-gold">Low-Moderate</span>
+                </div>
+                <span class="flip-hint">Click to flip ↩</span>
+              </div>
+            </div>
+            <div class="breed-back">
+              <h3>Burmese</h3>
+              <div class="breed-stat-row"><span>Origin</span><span>Myanmar</span></div>
+              <div class="breed-stat-row"><span>Lifespan</span><span>10–17 yrs</span></div>
+              <div class="breed-stat-row"><span>Energy</span><div class="trait-bar"><div class="trait-fill" style="width:80%"></div></div></div>
+              <div class="breed-stat-row"><span>Social</span><div class="trait-bar"><div class="trait-fill" style="width:100%"></div></div></div>
+              <div class="breed-stat-row"><span>Grooming</span><div class="trait-bar"><div class="trait-fill" style="width:20%"></div></div></div>
+              <p style="font-size:0.86rem;color:var(--cream-dim);margin-top:0.8rem">Silky muscular body and an inexhaustible desire for human companionship. Exceptional with children.</p>
+              <a href="quiz.html" class="btn btn-teal btn-sm" style="margin-top:1rem">Is this your match?</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Manx -->
+        <div class="breed-card reveal" data-name="manx" data-tags="active family moderate">
+          <div class="breed-card-inner">
+            <div class="breed-front">
+              <img src="Breeds/Manx.jpeg" alt="Manx cat">
+              <div class="breed-front-info">
+                <h3>Manx</h3>
+                <p class="origin">🌍 Isle of Man</p>
+                <div class="breed-care">
+                  <span class="badge badge-teal">Playful</span>
+                  <span class="badge badge-gold">Moderate Care</span>
+                </div>
+                <span class="flip-hint">Click to flip ↩</span>
+              </div>
+            </div>
+            <div class="breed-back">
+              <h3>Manx</h3>
+              <div class="breed-stat-row"><span>Origin</span><span>Isle of Man</span></div>
+              <div class="breed-stat-row"><span>Lifespan</span><span>8–14 yrs</span></div>
+              <div class="breed-stat-row"><span>Energy</span><div class="trait-bar"><div class="trait-fill" style="width:80%"></div></div></div>
+              <div class="breed-stat-row"><span>Social</span><div class="trait-bar"><div class="trait-fill" style="width:80%"></div></div></div>
+              <div class="breed-stat-row"><span>Grooming</span><div class="trait-bar"><div class="trait-fill" style="width:40%"></div></div></div>
+              <p style="font-size:0.86rem;color:var(--cream-dim);margin-top:0.8rem">Famous for their taillessness, sturdy build, and dog-like loyalty. Excellent jumpers and natural hunters.</p>
+              <a href="quiz.html" class="btn btn-teal btn-sm" style="margin-top:1rem">Is this your match?</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── COMPARISON TOOL ─────────────────────────────────────── -->
+  <section id="compare" class="section" style="padding-top:0">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-tag">⚖️ Compare Tool</div>
+        <h2>Compare Two Breeds</h2>
+        <p>Select any two breeds below for an instant side-by-side comparison.</p>
+      </div>
+      <div class="compare-selectors reveal">
+        <select id="compareA" class="compare-select" aria-label="First breed">
+          <option>Maine Coon</option><option>Siamese</option><option>Persian</option>
+          <option>Bengal</option><option>Scottish Fold</option><option>Russian Blue</option>
+          <option>Ragdoll</option><option>Sphynx</option><option>British Shorthair</option>
+          <option>Abyssinian</option><option>Burmese</option><option>Manx</option><option>Tabby</option>
+        </select>
+        <div class="compare-vs">VS</div>
+        <select id="compareB" class="compare-select" aria-label="Second breed">
+          <option>Bengal</option><option>Maine Coon</option><option>Siamese</option>
+          <option>Persian</option><option>Scottish Fold</option><option>Russian Blue</option>
+          <option>Ragdoll</option><option>Sphynx</option><option>British Shorthair</option>
+          <option>Abyssinian</option><option>Burmese</option><option>Manx</option><option>Tabby</option>
+        </select>
+      </div>
+      <div class="reveal" style="overflow-x:auto">
+        <table class="compare-table" aria-label="Breed comparison">
+          <thead>
+            <tr>
+              <th>Trait</th>
+              <th id="compareHeader1"></th>
+              <th id="compareHeader2"></th>
+            </tr>
+          </thead>
+          <tbody id="compareBody"></tbody>
+        </table>
+      </div>
+      <div style="text-align:center;margin-top:2rem">
+        <a href="quiz.html" class="btn btn-primary">🎯 Take the Full Breed Finder Quiz</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">🐱 Fur &amp; Learn</div>
+      <p>Your luxury destination for cat education, breed discovery, and feline care.</p>
+    </div>
+    <div class="footer-col"><h5>Explore</h5><ul>
+      <li><a href="breeds.html">Cat Breeds</a></li>
+      <li><a href="care-tips.html">Care Tips</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="quiz.html">Breed Quiz</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Company</h5><ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Connect</h5><ul>
+      <li><a href="mailto:hello@furandlearn.com">📧 Email Us</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Fur &amp; Learn. All rights reserved.</p>
+    <p>🐱 Learning about cats, one paw at a time 🐱</p>
+  </div>
+</footer>
+
+<button class="back-top" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

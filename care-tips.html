@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Expert cat care tips covering nutrition, grooming, health, environment, and behaviour — plus an interactive cat age calculator.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='80' font-size='80'%3E🐱%3C/text%3E%3C/svg%3E">
+  <title>Cat Care Tips – Fur &amp; Learn</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="particles-bg" aria-hidden="true"></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">🐱 Fur &amp; Learn</div>
+    <button class="mobile-toggle" onclick="toggleNav()" aria-label="Menu">☰</button>
+    <ul class="nav-menu">
+      <li><a href="Catphotoapp.html">Home</a></li>
+      <li><a href="breeds.html">Breeds</a></li>
+      <li><a href="care-tips.html" class="active">Care Tips</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="quiz.html">Breed Quiz</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="themeBtn" class="theme-toggle" onclick="toggleTheme()">☀️</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <nav class="breadcrumb"><a href="Catphotoapp.html">🏠 Home</a> / <span>Care Tips</span></nav>
+
+  <section class="page-hero">
+    <div class="section-tag">💡 Expert Advice</div>
+    <h1>Cat Care Tips</h1>
+    <p>Everything you need to keep your feline companion healthy, happy, and thriving — organised by topic.</p>
+  </section>
+
+  <!-- ── TABBED CARE TIPS ─────────────────────────────────────── -->
+  <section class="section" style="padding-top:1rem">
+    <div class="section-inner">
+      <div class="tabs reveal" role="tablist" aria-label="Care tip categories">
+        <button class="tab-btn active" data-tab="nutrition" role="tab" aria-selected="true">🍽️ Nutrition</button>
+        <button class="tab-btn" data-tab="grooming" role="tab" aria-selected="false">🧼 Grooming</button>
+        <button class="tab-btn" data-tab="health" role="tab" aria-selected="false">❤️ Health</button>
+        <button class="tab-btn" data-tab="environment" role="tab" aria-selected="false">🏠 Environment</button>
+        <button class="tab-btn" data-tab="behaviour" role="tab" aria-selected="false">🧠 Behaviour</button>
+      </div>
+
+      <!-- Nutrition -->
+      <div id="nutrition" class="tab-panel active" role="tabpanel">
+        <div class="tip-grid">
+          <div class="tip-card glass-card">
+            <h3>🥩 Quality Diet</h3>
+            <ul>
+              <li>Feed premium cat food formulated for your cat's life stage (kitten, adult, senior)</li>
+              <li>Look for named meat (chicken, salmon) as the first ingredient</li>
+              <li>Avoid artificial preservatives, colours, and excessive fillers</li>
+              <li>Mix wet and dry food for hydration balance and dental benefits</li>
+              <li>Always provide fresh, clean water in a ceramic or stainless bowl</li>
+            </ul>
+          </div>
+          <div class="tip-card glass-card">
+            <h3>⏰ Feeding Schedule</h3>
+            <ul>
+              <li>Kittens (under 1 year): Feed 3–4 small meals per day</li>
+              <li>Adult cats: Feed once or twice daily at consistent times</li>
+              <li>Senior cats (10+ years): Smaller, more frequent meals</li>
+              <li>Measure portions carefully — obesity is common in indoor cats</li>
+              <li>Consider puzzle feeders to slow fast eaters and provide stimulation</li>
+            </ul>
+          </div>
+          <div class="tip-card glass-card danger-card">
+            <h3>☠️ Dangerous Foods to Avoid</h3>
+            <ul>
+              <li>Chocolate & caffeine — toxic to the nervous system</li>
+              <li>Onions, garlic, and chives — damage red blood cells</li>
+              <li>Grapes and raisins — can cause acute kidney failure</li>
+              <li>Xylitol (artificial sweetener) — found in gum, yoghurt, baked goods</li>
+              <li>Raw dough, alcohol, and macadamia nuts</li>
+              <li>Cooked bones — splinter dangerously</li>
+            </ul>
+          </div>
+          <div class="tip-card glass-card">
+            <h3>💧 Hydration</h3>
+            <ul>
+              <li>Many cats are chronically under-hydrated — wet food helps significantly</li>
+              <li>Water fountains encourage drinking through running water</li>
+              <li>Place multiple water stations away from food bowls</li>
+              <li>Change water daily and clean bowls at least twice a week</li>
+              <li>Signs of dehydration: skin tent test, dry gums, lethargy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grooming -->
+      <div id="grooming" class="tab-panel" role="tabpanel">
+        <div class="tip-grid">
+          <div class="tip-card glass-card">
+            <h3>🖌️ Coat Care</h3>
+            <ul>
+              <li>Brush long-haired cats (Persian, Maine Coon) daily to prevent tangles</li>
+              <li>Short-haired cats need brushing 2–3 times per week</li>
+              <li>Use a slicker brush for detangling and a fine-tooth comb for finishing</li>
+              <li>Start grooming routines early in kittenhood for best acceptance</li>
+              <li>Check for fleas, ticks, or skin irritation during every session</li>
+            </ul>
+          </div>
+          <div class="tip-card glass-card">
+            <h3>✂️ Nails, Ears & Teeth</h3>
+            <ul>
+              <li>Trim nails every 2–3 weeks using proper cat nail clippers</li>
+              <li>Only clip the clear tip — avoid the pink quick</li>
+              <li>Clean ears weekly with a vet-approved solution and cotton ball</li>
+              <li>Never insert anything into the ear canal</li>
+              <li>Brush teeth 2–3 times per week with cat-specific toothpaste</li>
+              <li>Dental treats and water additives can supplement brushing</li>
+            </ul>
+          </div>
+          <div class="tip-card glass-card">
+            <h3>🚿 Bathing</h3>
+            <ul>
+              <li>Most cats groom themselves and rarely need baths</li>
+              <li>Sphynx cats require weekly warm-water baths for skin care</li>
+              <li>If needed, use a cat-specific mild shampoo — never human products</li>
+              <li>Keep water lukewarm and work quickly to minimise stress</li>
+              <li>Thoroughly dry with a warm towel or low-heat dryer setting</li>
+            </ul>
+          </div>
+          <div class="tip-card glass-card">
+            <h3>🏡 Litter Box Hygiene</h3>
+            <ul>
+              <li>Scoop waste at least once daily — cats refuse dirty boxes</li>
+              <li>Replace all litter completely every 1–2 weeks</li>
+              <li>Provide 1 litter box per cat, plus one extra</li>
+              <li>Keep boxes in quiet, accessible locations away from food</li>
+              <li>Wash the box itself with mild unscented soap monthly</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Health -->
+      <div id="health" class="tab-panel" role="tabpanel">
+        <div class="tip-grid">
+          <div class="tip-card glass-card">
+            <h3>🏥 Preventive Care</h3>
+            <ul>
+              <li>Kittens: vet visit at 8, 12, and 16 weeks for vaccinations</li>
+              <li>Adult cats: annual wellness check-ups</li>
+              <li>Senior cats (7+ years): biannual appointments</li>
+              <li>Spay/neuter by 5–6 months — reduces health risks significantly</li>
+              <li>Keep vaccinations, flea, tick, and worming treatments current</li>
+            </ul>
+          </div>
+          <div class="tip-card glass-card danger-card">
+            <h3>🚨 Warning Signs</h3>
+            <ul>
+              <li>Sudden changes in eating, drinking, or litter box habits</li>
+              <li>Vomiting more than 2–3 times per week</li>
+              <li>Unexplained weight loss or bloating</li>
+              <li>Laboured breathing or persistent coughing</li>
+              <li>Excessive grooming leading to bald patches</li>
+              <li>Any difficulty urinating — this is an emergency</li>
+            </ul>
+          </div>
+          <div class="tip-card glass-card">
+            <h3>🦷 Dental Health</h3>
+            <ul>
+              <li>80% of cats show signs of dental disease by age 3</li>
+              <li>Regular brushing is the gold standard — start as a kitten</li>
+              <li>Dry food alone does not clean teeth effectively</li>
+              <li>VOHC-approved dental treats and water additives help</li>
+              <li>Annual professional dental cleanings are recommended</li>
+            </ul>
+          </div>
+          <div class="tip-card glass-card">
+            <h3>🧬 Parasite Control</h3>
+            <ul>
+              <li>Treat for fleas year-round, especially in warm climates</li>
+              <li>Use vet-recommended treatments — avoid over-the-counter pyrethrins</li>
+              <li>Deworm kittens every 2 weeks until 12 weeks, then monthly until 6 months</li>
+              <li>Indoor cats still need regular parasite prevention</li>
+              <li>Check for ear mites if your cat scratches ears frequently</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Environment -->
+      <div id="environment" class="tab-panel" role="tabpanel">
+        <div class="tip-grid">
+          <div class="tip-card glass-card">
+            <h3>🏠 Safe Living Space</h3>
+            <ul>
+              <li>Secure all windows and balcony gaps — cats are escape artists</li>
+              <li>Remove toxic plants: lilies, pothos, philodendron, oleander</li>
+              <li>Store chemicals, medications, and small objects safely out of reach</li>
+              <li>Provide multiple vertical spaces — cats feel safer when elevated</li>
+              <li>Keep washing machines and dryers closed before use</li>
+            </ul>
+          </div>
+          <div class="tip-card glass-card">
+            <h3>🧸 Enrichment & Play</h3>
+            <ul>
+              <li>Rotate toys weekly to maintain novelty and prevent boredom</li>
+              <li>Dedicate 15–20 minutes of interactive play twice daily</li>
+              <li>Feather wands, laser pointers, and crinkle balls are favourites</li>
+              <li>Cat trees, shelves, and window perches satisfy climbing instincts</li>
+              <li>Food puzzles and slow feeders provide mental stimulation</li>
+            </ul>
+          </div>
+          <div class="tip-card glass-card">
+            <h3>🌿 Indoor vs Outdoor</h3>
+            <ul>
+              <li>Indoor cats live significantly longer (12–18 vs 5–7 years on average)</li>
+              <li>If outdoor access is desired, catio enclosures are the safest option</li>
+              <li>Leash training is possible — start young for best results</li>
+              <li>Microchip and collar-tag all cats, even predominantly indoor ones</li>
+              <li>Ensure outdoor cats are vaccinated for additional disease exposure</li>
+            </ul>
+          </div>
+          <div class="tip-card glass-card">
+            <h3>🛏️ Rest & Comfort</h3>
+            <ul>
+              <li>Provide multiple sleeping spots — cats like options and rotation</li>
+              <li>Heated cat beds are especially loved by senior cats</li>
+              <li>Ensure hiding spots exist — cats need private retreat spaces</li>
+              <li>Maintain consistent ambient temperature (18–25°C / 65–77°F)</li>
+              <li>Avoid sudden loud music, shouting, or appliance noise near rest areas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Behaviour -->
+      <div id="behaviour" class="tab-panel" role="tabpanel">
+        <div class="tip-grid">
+          <div class="tip-card glass-card">
+            <h3>🧩 Understanding Body Language</h3>
+            <ul>
+              <li>Slow blink = trust and affection — blink back to communicate love</li>
+              <li>Tail straight up = greeting, contentment, confidence</li>
+              <li>Flattened ears = fear, agitation, or aggression — give space</li>
+              <li>Exposed belly = comfort, but not always an invitation to touch</li>
+              <li>Chirping at windows = hunting instinct triggered by birds or prey</li>
+            </ul>
+          </div>
+          <div class="tip-card glass-card">
+            <h3>🏠 New Cat Introductions</h3>
+            <ul>
+              <li>Confine the new cat to one room for 1–2 weeks initially</li>
+              <li>Swap bedding between cats to exchange scents before meeting</li>
+              <li>Feed cats on opposite sides of a closed door to build positive association</li>
+              <li>First visual contact through a baby gate before full introduction</li>
+              <li>Expect 2–4 weeks for full adjustment — patience is everything</li>
+            </ul>
+          </div>
+          <div class="tip-card glass-card">
+            <h3>😤 Scratching & Spraying</h3>
+            <ul>
+              <li>Provide multiple scratching posts — tall sisal posts are preferred</li>
+              <li>Place posts near sleeping areas and high-traffic zones</li>
+              <li>Never punish scratching — redirect to appropriate surfaces</li>
+              <li>Spraying often indicates stress, a dirty litter box, or medical issues</li>
+              <li>Feliway (synthetic pheromone) diffusers can reduce stress behaviours</li>
+            </ul>
+          </div>
+          <div class="tip-card glass-card">
+            <h3>😺 Positive Reinforcement</h3>
+            <ul>
+              <li>Cats respond to reward, not punishment — always use positive reinforcement</li>
+              <li>High-value treats (tiny pieces of chicken or tuna) are powerful motivators</li>
+              <li>Clicker training is highly effective even for adult cats</li>
+              <li>Keep training sessions short (3–5 minutes) and end on a success</li>
+              <li>Ignore unwanted behaviours rather than scolding when safe to do so</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── AGE CALCULATOR ──────────────────────────────────────── -->
+  <section id="calculator" class="section" style="padding-top:0">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-tag">🔢 Interactive Tool</div>
+        <h2>Cat Age Calculator</h2>
+        <p>How old is your cat in human years? Drag the slider to find out.</p>
+      </div>
+      <div class="calc-wrap glass-card reveal">
+        <p style="color:var(--cream-dim);font-size:0.9rem;margin-bottom:0.5rem">Move the slider to select your cat's age</p>
+        <span id="catAgeLabel" style="color:var(--gold);font-weight:700;font-size:1.1rem">1 cat year</span>
+        <input
+          type="range"
+          id="catAgeSlider"
+          class="range-input"
+          min="0.1"
+          max="20"
+          step="0.1"
+          value="1"
+          aria-label="Cat age in years"
+        >
+        <div class="calc-display" id="humanAge" aria-live="polite">15 <small>human yrs</small></div>
+        <p class="calc-sub" id="ageStage">Kitten — full of chaos and joy 🐾</p>
+        <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--glass-border)">
+          <p style="font-size:0.82rem;color:var(--cream-dim);text-align:center">
+            Based on the AAHA feline life-stage classification. The first year = ~15 human years, second year adds ~9, then each subsequent year ≈ 4 human years.
+          </p>
+        </div>
+      </div>
+
+      <!-- Life Stages -->
+      <div class="features-grid" style="margin-top:3rem">
+        <div class="feature-card glass-card reveal">
+          <span class="feature-icon">🍼</span>
+          <h3>Kitten (0–1 yr)</h3>
+          <p>Rapid growth, high energy, prime socialisation window. Vaccinations begin at 8 weeks. Three vet visits in year one.</p>
+        </div>
+        <div class="feature-card glass-card reveal reveal-delay-1">
+          <span class="feature-icon">💪</span>
+          <h3>Young Adult (1–6 yrs)</h3>
+          <p>At peak physical condition. Annual check-ups, consistent diet, and enrichment activities keep them thriving.</p>
+        </div>
+        <div class="feature-card glass-card reveal reveal-delay-2">
+          <span class="feature-icon">🧘</span>
+          <h3>Mature (7–10 yrs)</h3>
+          <p>Begin watching for early signs of kidney disease, dental issues, and weight changes. Biannual vet visits recommended.</p>
+        </div>
+        <div class="feature-card glass-card reveal">
+          <span class="feature-icon">👑</span>
+          <h3>Senior (11+ yrs)</h3>
+          <p>Senior-formula food, joint support, more frequent vet check-ups. Extra warmth, gentler play, and maximum comfort.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter-section">
+    <div class="newsletter-inner reveal">
+      <div class="section-tag">Stay Updated</div>
+      <h2>Get Weekly Care Tips</h2>
+      <p>Join thousands of cat lovers receiving expert tips, breed spotlights, and adorable content every week.</p>
+      <form class="newsletter-form nl-form">
+        <input type="email" placeholder="Your email address…" required aria-label="Email address">
+        <button type="submit" class="btn btn-primary">Subscribe 🐾</button>
+      </form>
+      <p class="newsletter-small">No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">🐱 Fur &amp; Learn</div>
+      <p>Your luxury destination for cat education, breed discovery, and feline care.</p>
+    </div>
+    <div class="footer-col"><h5>Explore</h5><ul>
+      <li><a href="breeds.html">Cat Breeds</a></li>
+      <li><a href="care-tips.html">Care Tips</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="quiz.html">Breed Quiz</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Company</h5><ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Connect</h5><ul>
+      <li><a href="mailto:hello@furandlearn.com">📧 Email Us</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Fur &amp; Learn. All rights reserved.</p>
+    <p>🐱 Learning about cats, one paw at a time 🐱</p>
+  </div>
+</footer>
+
+<button class="back-top" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

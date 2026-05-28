@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Fur & Learn - Your luxury destination for cat lovers. Explore 13+ cat breeds, expert care tips, and an interactive breed finder quiz."
+    />
+    <meta
+      name="keywords"
+      content="cats, cat breeds, cat care, feline, breed quiz, cat guide, persian, maine coon, bengal"
+    />
+    <meta
+      property="og:title"
+      content="Fur & Learn - Discover the World of Cats"
+    />
+    <meta
+      property="og:description"
+      content="Interactive breed guides, care tips, photo gallery, breed finder quiz and more for cat lovers."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='80' font-size='80'%3E🐱%3C/text%3E%3C/svg%3E"
+    />
+    <title>Fur & Learn - Home</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- Particles -->
+    <div class="particles-bg" aria-hidden="true"></div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true">
+      <button
+        class="lightbox-close"
+        onclick="closeLightbox()"
+        aria-label="Close"
+      >
+        ✕
+      </button>
+      <button
+        class="lightbox-nav lightbox-prev"
+        onclick="lightboxNav(-1)"
+        aria-label="Previous"
+      >
+        ‹
+      </button>
+      <img id="lightboxImg" class="lightbox-img" src="" alt="" />
+      <button
+        class="lightbox-nav lightbox-next"
+        onclick="lightboxNav(1)"
+        aria-label="Next"
+      >
+        ›
+      </button>
+      <div id="lightboxCap" class="lightbox-caption"></div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <div class="logo">🐱 Fur &amp; Learn</div>
+        <button
+          class="mobile-toggle"
+          onclick="toggleNav()"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <ul class="nav-menu" role="list">
+          <li><a href="Catphotoapp.html" class="active">Home</a></li>
+          <li><a href="breeds.html">Breeds</a></li>
+          <li><a href="care-tips.html">Care Tips</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="quiz.html">Breed Quiz</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button
+            id="themeBtn"
+            class="theme-toggle"
+            onclick="toggleTheme()"
+            aria-label="Toggle theme"
+          >
+            ☀️
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ── HERO ─────────────────────────────────────────────── -->
+      <section class="hero-section" aria-label="Welcome">
+        <div class="orb orb-1" aria-hidden="true"></div>
+        <div class="orb orb-2" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <div class="hero-content">
+            <div class="hero-badge">✦ The Ultimate Cat Companion</div>
+            <h1 class="hero-title">
+              Discover the World of <em>Feline</em> Wonders
+            </h1>
+            <p class="hero-sub">
+              Your luxury guide to 13+ cat breeds, expert care, beautiful
+              photography, and an AI-powered breed finder quiz — all in one
+              place.
+            </p>
+            <div class="hero-buttons">
+              <a href="quiz.html" class="btn btn-primary"
+                >🎯 Find My Perfect Breed</a
+              >
+              <a href="breeds.html" class="btn btn-outline">Explore Breeds →</a>
+            </div>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <div class="number" data-target="13" data-suffix="+">0+</div>
+                <div class="label">Breeds</div>
+              </div>
+              <div class="hero-stat">
+                <div class="number" data-target="50" data-suffix="+">0+</div>
+                <div class="label">Care Tips</div>
+              </div>
+              <div class="hero-stat">
+                <div class="number" data-target="24" data-suffix="+">0+</div>
+                <div class="label">Gallery Photos</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="cat-card-3d">
+              <div class="card-face card-front">
+                <div class="card-shimmer"></div>
+                <div class="card-img-wrap">
+                  <img
+                    id="heroBreedImg"
+                    src="Breeds/Maine.jpg"
+                    alt="Featured cat breed"
+                  />
+                  <div class="card-img-overlay"></div>
+                </div>
+                <div class="card-info">
+                  <h3 id="heroBreedName" style="transition: opacity 0.3s">
+                    Maine Coon
+                  </h3>
+                  <p id="heroBreedDesc" style="transition: opacity 0.3s">
+                    The gentle giant
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── STATS ─────────────────────────────────────────────── -->
+      <section class="stats-section" aria-label="Statistics">
+        <div class="stats-row">
+          <div class="stat-box glass-card reveal">
+            <span class="stat-num" data-target="13" data-suffix="+">0+</span>
+            <div class="stat-label">Cat Breeds Covered</div>
+          </div>
+          <div class="stat-box glass-card reveal reveal-delay-1">
+            <span class="stat-num" data-target="5" data-suffix=" Questions"
+              >0 Questions</span
+            >
+            <div class="stat-label">Breed Finder Quiz</div>
+          </div>
+          <div class="stat-box glass-card reveal reveal-delay-2">
+            <span class="stat-num" data-target="100" data-suffix="%">0%</span>
+            <div class="stat-label">Free Resource</div>
+          </div>
+          <div class="stat-box glass-card reveal reveal-delay-3">
+            <span class="stat-num" data-target="1" data-suffix=" Stop"
+              >0 Stop</span
+            >
+            <div class="stat-label">Cat Knowledge Hub</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── FEATURES ──────────────────────────────────────────── -->
+      <section class="section" aria-label="Features">
+        <div class="section-inner">
+          <div class="section-header reveal">
+            <div class="section-tag">What We Offer</div>
+            <h2>Everything a Cat Lover Needs</h2>
+            <p>
+              From detailed breed profiles to interactive tools — your complete
+              feline resource.
+            </p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card glass-card reveal">
+              <span class="feature-icon">🧬</span>
+              <h3>13 Breed Profiles</h3>
+              <p>
+                Flip-card breed guides with 3D interactivity. Explore origin,
+                temperament, care levels, lifespan, and more.
+              </p>
+              <a
+                href="breeds.html"
+                class="btn btn-outline btn-sm"
+                style="margin-top: 1rem"
+                >Explore Breeds</a
+              >
+            </div>
+            <div class="feature-card glass-card reveal reveal-delay-1">
+              <span class="feature-icon">🎯</span>
+              <h3>Breed Finder Quiz</h3>
+              <p>
+                Answer 5 fun questions about your lifestyle and let our quiz
+                match you with your perfect feline companion.
+              </p>
+              <a
+                href="quiz.html"
+                class="btn btn-primary btn-sm"
+                style="margin-top: 1rem"
+                >Take the Quiz</a
+              >
+            </div>
+            <div class="feature-card glass-card reveal reveal-delay-2">
+              <span class="feature-icon">⚖️</span>
+              <h3>Breed Comparison Tool</h3>
+              <p>
+                Compare any two breeds side-by-side across energy, sociability,
+                grooming needs, origin, and lifespan.
+              </p>
+              <a
+                href="breeds.html#compare"
+                class="btn btn-outline btn-sm"
+                style="margin-top: 1rem"
+                >Compare Now</a
+              >
+            </div>
+            <div class="feature-card glass-card reveal">
+              <span class="feature-icon">💡</span>
+              <h3>Expert Care Tips</h3>
+              <p>
+                Tabbed guides covering nutrition, grooming, health, environment,
+                and behaviour — all in one clean layout.
+              </p>
+              <a
+                href="care-tips.html"
+                class="btn btn-outline btn-sm"
+                style="margin-top: 1rem"
+                >Read Tips</a
+              >
+            </div>
+            <div class="feature-card glass-card reveal reveal-delay-1">
+              <span class="feature-icon">🖼️</span>
+              <h3>Photo Gallery</h3>
+              <p>
+                Masonry gallery with lightbox viewer, breed filtering, and
+                stunning cat photography from around the world.
+              </p>
+              <a
+                href="gallery.html"
+                class="btn btn-outline btn-sm"
+                style="margin-top: 1rem"
+                >View Gallery</a
+              >
+            </div>
+            <div class="feature-card glass-card reveal reveal-delay-2">
+              <span class="feature-icon">🔢</span>
+              <h3>Cat Age Calculator</h3>
+              <p>
+                Curious how old your cat is in human years? Use our interactive
+                slider to find out the answer instantly.
+              </p>
+              <a
+                href="care-tips.html#calculator"
+                class="btn btn-outline btn-sm"
+                style="margin-top: 1rem"
+                >Calculate Age</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── LOVE & HATE ────────────────────────────────────────── -->
+      <section class="section" aria-label="Cat preferences">
+        <div class="section-inner">
+          <div class="section-header reveal">
+            <div class="section-tag">Feline Psychology</div>
+            <h2>What Do Cats Love &amp; Hate?</h2>
+            <p>
+              Understanding your cat's preferences is the first step to a happy
+              relationship.
+            </p>
+          </div>
+          <div class="pref-grid reveal">
+            <div class="pref-box love-box glass-card">
+              <h3>💚 Things Cats Love</h3>
+              <ul>
+                <li>🧶 Playing with toys, strings & feather wands</li>
+                <li>😴 Warm, cosy napping spots in sunbeams</li>
+                <li>🐭 Hunting games — real or simulated</li>
+                <li>💆 Gentle head scratches and slow blinks</li>
+                <li>🪟 Window perches for bird watching</li>
+                <li>🎵 Calm environments with soft sounds</li>
+                <li>📦 Cardboard boxes — always free!</li>
+                <li>🐾 Consistent daily routines</li>
+              </ul>
+            </div>
+            <div class="pref-box hate-box glass-card">
+              <h3>💔 Things Cats Hate</h3>
+              <ul>
+                <li>💊 Medicine and unexpected vet visits</li>
+                <li>⛈️ Loud noises, thunderstorms, fireworks</li>
+                <li>🚿 Surprise baths when they're dry</li>
+                <li>🏃 Sudden changes to their daily routine</li>
+                <li>👃 Strong smells — citrus, essential oils</li>
+                <li>😤 Being stared at by unfamiliar faces</li>
+                <li>📲 Loud, sudden notification sounds</li>
+                <li>🤚 Belly touches they didn't invite</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── FUN FACTS ──────────────────────────────────────────── -->
+      <section class="section" style="padding-top: 0" aria-label="Fun facts">
+        <div class="section-inner">
+          <div class="section-header reveal">
+            <div class="section-tag">Did You Know?</div>
+            <h2>Fascinating Feline Facts</h2>
+          </div>
+          <div class="facts-grid">
+            <div class="fact-card glass-card reveal">
+              <span class="fact-icon">🔊</span>
+              <p>
+                Cats can produce over
+                <strong>100 different</strong> vocalizations — far more than
+                dogs.
+              </p>
+            </div>
+            <div class="fact-card glass-card reveal reveal-delay-1">
+              <span class="fact-icon">👁️</span>
+              <p>
+                Cats have a <strong>third eyelid</strong> — the nictitating
+                membrane — for extra eye protection.
+              </p>
+            </div>
+            <div class="fact-card glass-card reveal reveal-delay-2">
+              <span class="fact-icon">🏃</span>
+              <p>
+                Cats can sprint up to <strong>30 mph (48 km/h)</strong> in short
+                bursts of pure energy.
+              </p>
+            </div>
+            <div class="fact-card glass-card reveal">
+              <span class="fact-icon">😴</span>
+              <p>
+                Cats sleep <strong>12–16 hours</strong> a day — that's 70% of
+                their entire lives!
+              </p>
+            </div>
+            <div class="fact-card glass-card reveal reveal-delay-1">
+              <span class="fact-icon">👃</span>
+              <p>
+                A cat's sense of smell is <strong>14 times</strong> more
+                powerful than a human's.
+              </p>
+            </div>
+            <div class="fact-card glass-card reveal reveal-delay-2">
+              <span class="fact-icon">👂</span>
+              <p>
+                Cats can rotate their ears independently up to
+                <strong>180 degrees</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── FEATURED BREEDS ────────────────────────────────────── -->
+      <section
+        class="section"
+        style="padding-top: 0"
+        aria-label="Featured breeds"
+      >
+        <div class="section-inner">
+          <div class="section-header reveal">
+            <div class="section-tag">Spotlight</div>
+            <h2>Featured Breeds</h2>
+            <p>Click any card to flip it and reveal detailed breed info.</p>
+          </div>
+          <div
+            class="breed-grid"
+            style="grid-template-columns: repeat(auto-fill, minmax(260px, 1fr))"
+          >
+            <!-- Maine Coon -->
+            <div
+              class="breed-card reveal"
+              data-name="maine coon"
+              data-tags="family active large"
+            >
+              <div class="breed-card-inner">
+                <div class="breed-front">
+                  <img src="Breeds/Maine.jpg" alt="Maine Coon" />
+                  <div class="breed-front-info">
+                    <h3>Maine Coon</h3>
+                    <p class="origin">🌎 Maine, USA</p>
+                    <div class="breed-care">
+                      <span class="badge badge-teal">Family-Friendly</span>
+                      <span class="badge badge-gold">Moderate Care</span>
+                    </div>
+                    <span class="flip-hint">Click to flip ↩</span>
+                  </div>
+                </div>
+                <div class="breed-back">
+                  <h3>Maine Coon</h3>
+                  <div class="breed-stat-row">
+                    <span>Lifespan</span><span>12–18 yrs</span>
+                  </div>
+                  <div class="breed-stat-row">
+                    <span>Energy</span>
+                    <div class="trait-bar">
+                      <div class="trait-fill" style="width: 60%"></div>
+                    </div>
+                  </div>
+                  <div class="breed-stat-row">
+                    <span>Social</span>
+                    <div class="trait-bar">
+                      <div class="trait-fill" style="width: 100%"></div>
+                    </div>
+                  </div>
+                  <div class="breed-stat-row">
+                    <span>Grooming</span>
+                    <div class="trait-bar">
+                      <div class="trait-fill" style="width: 80%"></div>
+                    </div>
+                  </div>
+                  <p
+                    style="
+                      font-size: 0.88rem;
+                      color: var(--cream-dim);
+                      margin-top: 0.8rem;
+                    "
+                  >
+                    Gentle giants with dog-like loyalty. Excellent with families
+                    and other pets.
+                  </p>
+                  <a
+                    href="breeds.html"
+                    class="btn btn-outline btn-sm"
+                    style="margin-top: 1rem"
+                    >Full Profile</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Bengal -->
+            <div
+              class="breed-card reveal reveal-delay-1"
+              data-name="bengal"
+              data-tags="active large energetic"
+            >
+              <div class="breed-card-inner">
+                <div class="breed-front">
+                  <img src="Breeds/Bengal.jpeg" alt="Bengal cat" />
+                  <div class="breed-front-info">
+                    <h3>Bengal</h3>
+                    <p class="origin">🌎 USA</p>
+                    <div class="breed-care">
+                      <span class="badge badge-rose">High Energy</span>
+                      <span class="badge badge-gold">High Care</span>
+                    </div>
+                    <span class="flip-hint">Click to flip ↩</span>
+                  </div>
+                </div>
+                <div class="breed-back">
+                  <h3>Bengal</h3>
+                  <div class="breed-stat-row">
+                    <span>Lifespan</span><span>10–16 yrs</span>
+                  </div>
+                  <div class="breed-stat-row">
+                    <span>Energy</span>
+                    <div class="trait-bar">
+                      <div class="trait-fill" style="width: 100%"></div>
+                    </div>
+                  </div>
+                  <div class="breed-stat-row">
+                    <span>Social</span>
+                    <div class="trait-bar">
+                      <div class="trait-fill" style="width: 80%"></div>
+                    </div>
+                  </div>
+                  <div class="breed-stat-row">
+                    <span>Grooming</span>
+                    <div class="trait-bar">
+                      <div class="trait-fill" style="width: 40%"></div>
+                    </div>
+                  </div>
+                  <p
+                    style="
+                      font-size: 0.88rem;
+                      color: var(--cream-dim);
+                      margin-top: 0.8rem;
+                    "
+                  >
+                    Wild at heart — athletic, daring, and endlessly stimulating
+                    to watch and play with.
+                  </p>
+                  <a
+                    href="breeds.html"
+                    class="btn btn-outline btn-sm"
+                    style="margin-top: 1rem"
+                    >Full Profile</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Persian -->
+            <div
+              class="breed-card reveal reveal-delay-2"
+              data-name="persian"
+              data-tags="calm quiet indoor"
+            >
+              <div class="breed-card-inner">
+                <div class="breed-front">
+                  <img src="Breeds/Persian.jpg" alt="Persian cat" />
+                  <div class="breed-front-info">
+                    <h3>Persian</h3>
+                    <p class="origin">🌍 Iran</p>
+                    <div class="breed-care">
+                      <span class="badge badge-teal">Calm & Gentle</span>
+                      <span class="badge badge-gold">High Grooming</span>
+                    </div>
+                    <span class="flip-hint">Click to flip ↩</span>
+                  </div>
+                </div>
+                <div class="breed-back">
+                  <h3>Persian</h3>
+                  <div class="breed-stat-row">
+                    <span>Lifespan</span><span>8–15 yrs</span>
+                  </div>
+                  <div class="breed-stat-row">
+                    <span>Energy</span>
+                    <div class="trait-bar">
+                      <div class="trait-fill" style="width: 20%"></div>
+                    </div>
+                  </div>
+                  <div class="breed-stat-row">
+                    <span>Social</span>
+                    <div class="trait-bar">
+                      <div class="trait-fill" style="width: 60%"></div>
+                    </div>
+                  </div>
+                  <div class="breed-stat-row">
+                    <span>Grooming</span>
+                    <div class="trait-bar">
+                      <div class="trait-fill" style="width: 100%"></div>
+                    </div>
+                  </div>
+                  <p
+                    style="
+                      font-size: 0.88rem;
+                      color: var(--cream-dim);
+                      margin-top: 0.8rem;
+                    "
+                  >
+                    The ultimate lap cat — serene, regal, and perfectly content
+                    in a quiet loving home.
+                  </p>
+                  <a
+                    href="breeds.html"
+                    class="btn btn-outline btn-sm"
+                    style="margin-top: 1rem"
+                    >Full Profile</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="text-align: center; margin-top: 2.5rem">
+            <a href="breeds.html" class="btn btn-primary"
+              >View All 13 Breeds →</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ── TESTIMONIALS ───────────────────────────────────────── -->
+      <section class="section" style="padding-top: 0" aria-label="Testimonials">
+        <div class="section-inner">
+          <div class="section-header reveal">
+            <div class="section-tag">Community</div>
+            <h2>What Cat Lovers Say</h2>
+          </div>
+          <div class="testimonials-grid">
+            <div class="testimonial-card glass-card reveal">
+              <div class="stars">★★★★★</div>
+              <p>
+                "The breed quiz was spot-on! It matched me with a Maine Coon and
+                I couldn't be happier with my new furry family member."
+              </p>
+              <div class="author">
+                <div class="author-avatar">😺</div>
+                <div>
+                  <div class="author-name">Sarah M.</div>
+                  <div class="author-title">Cat Mom of 2</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card glass-card reveal reveal-delay-1">
+              <div class="stars">★★★★★</div>
+              <p>
+                "The care tips section is a lifesaver. The tabbed layout makes
+                it so easy to find exactly what I need in a hurry."
+              </p>
+              <div class="author">
+                <div class="author-avatar">🧑</div>
+                <div>
+                  <div class="author-name">James K.</div>
+                  <div class="author-title">First-time Cat Owner</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card glass-card reveal reveal-delay-2">
+              <div class="stars">★★★★★</div>
+              <p>
+                "I love comparing breeds before deciding. The comparison tool
+                and flip-cards make learning about cats genuinely fun!"
+              </p>
+              <div class="author">
+                <div class="author-avatar">👩</div>
+                <div>
+                  <div class="author-name">Emma R.</div>
+                  <div class="author-title">Feline Enthusiast</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card glass-card reveal reveal-delay-3">
+              <div class="stars">★★★★★</div>
+              <p>
+                "Dark mode, stunning design, and genuinely useful content. Fur &
+                Learn is the best cat resource I've found online."
+              </p>
+              <div class="author">
+                <div class="author-avatar">🧔</div>
+                <div>
+                  <div class="author-name">Michael T.</div>
+                  <div class="author-title">Cat Photographer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── FAQ ────────────────────────────────────────────────── -->
+      <section class="section" style="padding-top: 0" aria-label="FAQ">
+        <div class="section-inner">
+          <div class="section-header reveal">
+            <div class="section-tag">FAQ</div>
+            <h2>Frequently Asked Questions</h2>
+          </div>
+          <div class="faq-list reveal">
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                How do I choose the right cat breed for my lifestyle?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-a" role="region">
+                <p>
+                  Consider your activity level, living space, time availability,
+                  and grooming tolerance. Our interactive Breed Finder Quiz
+                  takes just 2 minutes and gives you a personalised
+                  recommendation. High-energy breeds like Bengals need lots of
+                  play, while calm breeds like Persians suit quieter homes.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                How often should I groom my cat?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-a" role="region">
+                <p>
+                  Most cats need brushing 2–3 times per week to prevent matting
+                  and reduce shedding. Long-haired breeds like Persians and
+                  Maine Coons require daily grooming. Short-haired breeds like
+                  Abyssinians and Russian Blues are largely self-sufficient.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                What should I feed my cat?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-a" role="region">
+                <p>
+                  Cats are obligate carnivores and need high-quality animal
+                  protein. Choose premium commercial cat food with a named meat
+                  as the first ingredient. Avoid toxic foods like onions,
+                  garlic, chocolate, grapes, and xylitol. A mix of wet and dry
+                  food supports hydration and dental health.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                How can I help my cat adjust to a new home?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-a" role="region">
+                <p>
+                  Start by confining them to one quiet room with food, water, a
+                  litter box, and familiar scents. Gradually introduce them to
+                  new spaces over 1–2 weeks. Provide hiding spots and maintain
+                  calm routines. Patience is key — adjustment can take anywhere
+                  from days to several weeks.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                How often should my cat visit the vet?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-a" role="region">
+                <p>
+                  Kittens need more frequent visits in their first year for
+                  vaccinations. Adult cats (1–7 years) need annual check-ups.
+                  Senior cats (7+ years) benefit from biannual visits to catch
+                  age-related conditions early. Preventive care is always less
+                  expensive than treatment.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                What are signs my cat might be unwell?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-a" role="region">
+                <p>
+                  Watch for changes in eating, drinking, litter habits,
+                  behaviour, or coat condition. Signs include vomiting (more
+                  than occasionally), diarrhea, lethargy, weight loss, excessive
+                  grooming, or breathing difficulties. When in doubt, always
+                  consult your vet — early intervention saves lives.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── NEWSLETTER ─────────────────────────────────────────── -->
+      <section class="newsletter-section" aria-label="Newsletter">
+        <div class="newsletter-inner reveal">
+          <div class="section-tag">Stay in the Loop</div>
+          <h2>Join the Fur &amp; Learn Community</h2>
+          <p>
+            Weekly cat tips, adorable breed spotlights, and exclusive content —
+            zero spam, just purr-fect updates!
+          </p>
+          <form
+            class="newsletter-form nl-form"
+            role="form"
+            aria-label="Newsletter signup"
+          >
+            <input
+              type="email"
+              placeholder="Your email address..."
+              required
+              aria-label="Email address"
+            />
+            <button type="submit" class="btn btn-primary">Subscribe 🐾</button>
+          </form>
+          <p class="newsletter-small">
+            No spam. Unsubscribe anytime. We respect your inbox 😸
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">🐱 Fur &amp; Learn</div>
+          <p>
+            Your luxury destination for cat education, breed discovery, and
+            feline care. Built with love for cat lovers worldwide.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="breeds.html">Cat Breeds</a></li>
+            <li><a href="care-tips.html">Care Tips</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="quiz.html">Breed Quiz</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <ul>
+            <li><a href="mailto:hello@furandlearn.com">📧 Email Us</a></li>
+            <li><a href="contact.html">💬 Send a Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © 2026 Fur &amp; Learn. All rights reserved. Created with
+          <span style="color: var(--rose)">❤️</span> for cat lovers worldwide.
+        </p>
+        <p>🐱 Learning about cats, one paw at a time 🐱</p>
+      </div>
+    </footer>
+
+    <button class="back-top" onclick="scrollToTop()" aria-label="Scroll to top">
+      ↑
+    </button>
+    <script src="/script.js"></script>
+  </body>
+</html>

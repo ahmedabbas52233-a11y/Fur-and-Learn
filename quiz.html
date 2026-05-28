@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Take the Fur & Learn Breed Finder Quiz — 5 questions to match you with your perfect cat breed.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='80' font-size='80'%3E🐱%3C/text%3E%3C/svg%3E">
+  <title>Breed Finder Quiz – Fur &amp; Learn</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="particles-bg" aria-hidden="true"></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">🐱 Fur &amp; Learn</div>
+    <button class="mobile-toggle" onclick="toggleNav()" aria-label="Menu">☰</button>
+    <ul class="nav-menu">
+      <li><a href="Catphotoapp.html">Home</a></li>
+      <li><a href="breeds.html">Breeds</a></li>
+      <li><a href="care-tips.html">Care Tips</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="quiz.html" class="active">Breed Quiz</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="themeBtn" class="theme-toggle" onclick="toggleTheme()">☀️</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <nav class="breadcrumb"><a href="Catphotoapp.html">🏠 Home</a> / <span>Breed Quiz</span></nav>
+
+  <section class="page-hero" aria-label="Quiz hero">
+    <div class="section-tag">🎯 Interactive Tool</div>
+    <h1>Find Your Perfect Breed</h1>
+    <p>Answer 5 quick questions about your lifestyle and we'll match you with your ideal feline companion.</p>
+  </section>
+
+  <section class="section" style="padding-top:1rem">
+    <div class="section-inner">
+      <div class="quiz-wrap">
+
+        <!-- Start Screen -->
+        <div id="quizStart" class="glass-card reveal" style="padding:3rem;text-align:center">
+          <div style="font-size:4rem;margin-bottom:1.5rem">🐾</div>
+          <h2 style="margin-bottom:1rem">Ready to Find Your Match?</h2>
+          <p style="max-width:480px;margin:0 auto 2rem">This quick 5-question quiz analyses your lifestyle, living space, and preferences to recommend the perfect cat breed for you.</p>
+          <div style="display:flex;gap:1.2rem;flex-wrap:wrap;justify-content:center;margin-bottom:2rem">
+            <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.9rem;color:var(--cream-dim)">
+              <span style="color:var(--gold)">✦</span> 5 questions
+            </div>
+            <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.9rem;color:var(--cream-dim)">
+              <span style="color:var(--gold)">✦</span> ~2 minutes
+            </div>
+            <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.9rem;color:var(--cream-dim)">
+              <span style="color:var(--gold)">✦</span> Personalised result
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="startQuiz()" style="font-size:1.1rem;padding:1rem 2.5rem">
+            Start the Quiz 🎯
+          </button>
+        </div>
+
+        <!-- Quiz Box -->
+        <div id="quizBox" class="hidden">
+          <div class="quiz-progress" aria-label="Quiz progress" role="progressbar">
+            <div class="quiz-prog-step"></div>
+            <div class="quiz-prog-step"></div>
+            <div class="quiz-prog-step"></div>
+            <div class="quiz-prog-step"></div>
+            <div class="quiz-prog-step"></div>
+          </div>
+          <div class="glass-card" style="padding:2.5rem">
+            <div class="quiz-counter" style="font-size:0.82rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.2rem">Question 1 of 5</div>
+            <h2 class="quiz-question">Loading…</h2>
+            <p class="quiz-sub"></p>
+            <div class="quiz-options" style="margin-top:1.5rem"></div>
+            <div class="quiz-nav">
+              <span style="font-size:0.85rem;color:var(--cream-dim)">Select an option to continue →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Result -->
+        <div id="quizResult" class="quiz-result"></div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section" style="padding-top:0">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-tag">How It Works</div>
+        <h2>Smart Matching in 3 Steps</h2>
+      </div>
+      <div class="features-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="feature-card glass-card reveal">
+          <span class="feature-icon">📝</span>
+          <h3>Answer 5 Questions</h3>
+          <p>Tell us about your lifestyle, home, family, time availability, and grooming preferences.</p>
+        </div>
+        <div class="feature-card glass-card reveal reveal-delay-1">
+          <span class="feature-icon">🧠</span>
+          <h3>Smart Analysis</h3>
+          <p>Our algorithm weighs your answers across key compatibility dimensions to find the best fit.</p>
+        </div>
+        <div class="feature-card glass-card reveal reveal-delay-2">
+          <span class="feature-icon">🐱</span>
+          <h3>Meet Your Match</h3>
+          <p>Receive a personalised breed recommendation with a full profile, traits, and care guide link.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">🐱 Fur &amp; Learn</div>
+      <p>Your luxury destination for cat education, breed discovery, and feline care.</p>
+    </div>
+    <div class="footer-col"><h5>Explore</h5><ul>
+      <li><a href="breeds.html">Cat Breeds</a></li>
+      <li><a href="care-tips.html">Care Tips</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="quiz.html">Breed Quiz</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Company</h5><ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Connect</h5><ul>
+      <li><a href="mailto:hello@furandlearn.com">📧 Email Us</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Fur &amp; Learn. All rights reserved.</p>
+    <p>🐱 Learning about cats, one paw at a time 🐱</p>
+  </div>
+</footer>
+
+<button class="back-top" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+<script src="script.js"></script>
+<style>
+  .hidden { display: none !important; }
+</style>
+</body>
+</html>

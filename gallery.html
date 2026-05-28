@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse beautiful cat photos in our masonry gallery with lightbox viewer and breed filters.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='80' font-size='80'%3E🐱%3C/text%3E%3C/svg%3E">
+  <title>Cat Gallery – Fur &amp; Learn</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="particles-bg" aria-hidden="true"></div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">✕</button>
+  <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1)" aria-label="Previous image">‹</button>
+  <img id="lightboxImg" class="lightbox-img" src="" alt="">
+  <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1)" aria-label="Next image">›</button>
+  <div id="lightboxCap" class="lightbox-caption"></div>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">🐱 Fur &amp; Learn</div>
+    <button class="mobile-toggle" onclick="toggleNav()" aria-label="Menu">☰</button>
+    <ul class="nav-menu">
+      <li><a href="Catphotoapp.html">Home</a></li>
+      <li><a href="breeds.html">Breeds</a></li>
+      <li><a href="care-tips.html">Care Tips</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="quiz.html">Breed Quiz</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="themeBtn" class="theme-toggle" onclick="toggleTheme()">☀️</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <nav class="breadcrumb"><a href="Catphotoapp.html">🏠 Home</a> / <span>Gallery</span></nav>
+
+  <section class="page-hero">
+    <div class="section-tag">🖼️ Photo Gallery</div>
+    <h1>Cat Photography</h1>
+    <p>Click any photo to open the full lightbox viewer. Use arrow keys to navigate.</p>
+  </section>
+
+  <!-- Filter Bar -->
+  <section class="section" style="padding-top:1rem;padding-bottom:2rem">
+    <div class="section-inner">
+      <div class="filter-bar reveal" role="group" aria-label="Gallery filters">
+        <button class="filter-btn active" data-gallery-filter="all">All Photos</button>
+        <button class="filter-btn" data-gallery-filter="tabby">Tabby</button>
+        <button class="filter-btn" data-gallery-filter="siamese">Siamese</button>
+        <button class="filter-btn" data-gallery-filter="persian">Persian</button>
+        <button class="filter-btn" data-gallery-filter="outdoor">Outdoor</button>
+        <button class="filter-btn" data-gallery-filter="kitten">Kittens</button>
+        <button class="filter-btn" data-gallery-filter="playful">Playful</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="section" style="padding-top:0">
+    <div class="section-inner">
+      <div class="gallery-grid" id="galleryGrid">
+
+        <div class="gallery-item reveal" data-category="tabby outdoor">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/800px-Cat03.jpg"
+               alt="Tabby cat sitting outdoors on a stone surface" loading="lazy">
+          <div class="gallery-overlay"><p>Outdoor Adventure</p></div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-1" data-category="kitten playful">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Sheba_delite.jpg/640px-Sheba_delite.jpg"
+               alt="Young kitten playing with a toy" loading="lazy">
+          <div class="gallery-overlay"><p>Playtime Bliss</p></div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-2" data-category="persian relaxed">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/800px-Golde33443.jpg"
+               alt="White and grey long-haired cat relaxing" loading="lazy">
+          <div class="gallery-overlay"><p>Peaceful Moments</p></div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="tabby indoor">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/800px-Cat_November_2010-1a.jpg"
+               alt="Cat gazing out a sunlit window" loading="lazy">
+          <div class="gallery-overlay"><p>Window Watching</p></div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-1" data-category="siamese portrait">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Siam_lilacpoint.jpg/800px-Siam_lilacpoint.jpg"
+               alt="Siamese cat with striking blue eyes" loading="lazy">
+          <div class="gallery-overlay"><p>Siamese Elegance</p></div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-2" data-category="tabby outdoor playful">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png"
+               alt="Fluffy cat in a garden" loading="lazy">
+          <div class="gallery-overlay"><p>Garden Explorer</p></div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="kitten playful">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Gustav_chocolate.jpg/800px-Gustav_chocolate.jpg"
+               alt="Chocolate brown kitten with bright eyes" loading="lazy">
+          <div class="gallery-overlay"><p>Chocolate Dream</p></div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-1" data-category="tabby indoor portrait">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Collage_of_Nine_Cats-compressed.jpg/800px-Collage_of_Nine_Cats-compressed.jpg"
+               alt="Collage of beautiful cats of different breeds" loading="lazy">
+          <div class="gallery-overlay"><p>Cat Parade</p></div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-2" data-category="outdoor tabby">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Cat_August_2010-4.jpg/800px-Cat_August_2010-4.jpg"
+               alt="Tabby cat outdoors in sunshine" loading="lazy">
+          <div class="gallery-overlay"><p>Sun Seeker</p></div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="kitten playful indoor">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Cara_gato.jpg/800px-Cara_gato.jpg"
+               alt="Curious kitten face close-up" loading="lazy">
+          <div class="gallery-overlay"><p>Curious Eyes</p></div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-1" data-category="tabby portrait">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/So_happy_together.jpg/800px-So_happy_together.jpg"
+               alt="Two cats cuddling together" loading="lazy">
+          <div class="gallery-overlay"><p>Best of Friends</p></div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-2" data-category="persian indoor portrait">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Tortoise-Shell-Calico.jpg/800px-Tortoise-Shell-Calico.jpg"
+               alt="Beautiful tortoiseshell calico cat" loading="lazy">
+          <div class="gallery-overlay"><p>Tortoiseshell Beauty</p></div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="outdoor tabby playful">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sleeping_cat_on_her_back.jpg/800px-Sleeping_cat_on_her_back.jpg"
+               alt="Cat sleeping blissfully on its back" loading="lazy">
+          <div class="gallery-overlay"><p>Blissful Nap</p></div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-1" data-category="kitten portrait playful">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Domestic_cat_stretched_out.jpg/800px-Domestic_cat_stretched_out.jpg"
+               alt="Cat stretched out comfortably" loading="lazy">
+          <div class="gallery-overlay"><p>Maximum Stretch</p></div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-2" data-category="tabby indoor">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Six_weeks_old_cat.jpg/800px-Six_weeks_old_cat.jpg"
+               alt="Tiny six-week-old kitten in a basket" loading="lazy">
+          <div class="gallery-overlay"><p>Six Weeks Old</p></div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="siamese portrait indoor">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Zunge_raus.jpg/800px-Zunge_raus.jpg"
+               alt="Playful cat sticking out its tongue" loading="lazy">
+          <div class="gallery-overlay"><p>Goofball Energy</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="padding-top:0;text-align:center">
+    <div class="section-inner">
+      <div class="glass-card reveal" style="padding:3rem;max-width:600px;margin:0 auto">
+        <div style="font-size:3rem;margin-bottom:1rem">📸</div>
+        <h2 style="margin-bottom:1rem">Share Your Cat</h2>
+        <p style="margin-bottom:2rem">Got an adorable cat photo you'd like featured? We'd love to see it — get in touch!</p>
+        <a href="contact.html" class="btn btn-primary">Share Your Photo 🐾</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">🐱 Fur &amp; Learn</div>
+      <p>Your luxury destination for cat education, breed discovery, and feline care.</p>
+    </div>
+    <div class="footer-col"><h5>Explore</h5><ul>
+      <li><a href="breeds.html">Cat Breeds</a></li>
+      <li><a href="care-tips.html">Care Tips</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="quiz.html">Breed Quiz</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Company</h5><ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Connect</h5><ul>
+      <li><a href="mailto:hello@furandlearn.com">📧 Email Us</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Fur &amp; Learn. All rights reserved.</p>
+    <p>🐱 Learning about cats, one paw at a time 🐱</p>
+  </div>
+</footer>
+
+<button class="back-top" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+<script src="script.js"></script>
+<script>
+// Gallery filter logic
+document.querySelectorAll('[data-gallery-filter]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-gallery-filter]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.galleryFilter;
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      const cats = item.dataset.category || '';
+      item.style.display = (filter === 'all' || cats.includes(filter)) ? '' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>
