@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Get in touch with the Fur & Learn team. We'd love to hear from you!">
+  <meta name="description" content="Get in touch with the Fur &amp; Learn team. We'd love to hear from you!">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='80' font-size='80'%3E🐱%3C/text%3E%3C/svg%3E">
   <title>Contact – Fur &amp; Learn</title>
   <link rel="stylesheet" href="styles.css">
@@ -40,14 +40,14 @@
     <p>Questions, feedback, cat photos, or collaboration ideas — we'd love to hear from you.</p>
   </section>
 
-  <section class="section" style="padding-top:1rem">
+  <section class="section section-sm-top">
     <div class="section-inner">
       <div class="contact-grid reveal">
 
         <!-- Contact Info -->
         <div class="contact-info glass-card">
-          <h2 style="margin-bottom:1.5rem">We're Here for You</h2>
-          <p style="margin-bottom:2.5rem">Whether you have a question about cat care, want to share a breed story, or would like to collaborate — our inbox is always open.</p>
+          <h2 class="mb-lg">We're Here for You</h2>
+          <p class="mb-xl">Whether you have a question about cat care, want to share a breed story, or would like to collaborate — our inbox is always open.</p>
 
           <div class="contact-detail">
             <div class="contact-icon">📧</div>
@@ -56,7 +56,6 @@
               <p><a href="mailto:hello@furandlearn.com">hello@furandlearn.com</a></p>
             </div>
           </div>
-
           <div class="contact-detail">
             <div class="contact-icon">🕐</div>
             <div>
@@ -64,7 +63,6 @@
               <p>We aim to reply within 24–48 hours on business days.</p>
             </div>
           </div>
-
           <div class="contact-detail">
             <div class="contact-icon">📸</div>
             <div>
@@ -72,7 +70,6 @@
               <p>Got a stunning photo? We feature community cats in our gallery — send it our way!</p>
             </div>
           </div>
-
           <div class="contact-detail">
             <div class="contact-icon">🤝</div>
             <div>
@@ -81,13 +78,12 @@
             </div>
           </div>
 
-          <!-- FAQ quick links -->
-          <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--glass-border)">
-            <p style="font-size:0.85rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem">Quick Links</p>
-            <div style="display:flex;flex-direction:column;gap:0.6rem">
-              <a href="care-tips.html" style="font-size:0.9rem;display:flex;align-items:center;gap:0.5rem">→ Cat Care Tips &amp; Guides</a>
-              <a href="breeds.html" style="font-size:0.9rem;display:flex;align-items:center;gap:0.5rem">→ Breed Profiles &amp; Comparison</a>
-              <a href="quiz.html" style="font-size:0.9rem;display:flex;align-items:center;gap:0.5rem">→ Breed Finder Quiz</a>
+          <div class="divider-line">
+            <p class="quick-label">Quick Links</p>
+            <div class="contact-link-list">
+              <a href="care-tips.html">→ Cat Care Tips &amp; Guides</a>
+              <a href="breeds.html">→ Breed Profiles &amp; Comparison</a>
+              <a href="quiz.html">→ Breed Finder Quiz</a>
             </div>
           </div>
         </div>
@@ -111,7 +107,7 @@
             </div>
             <div class="form-group">
               <label for="subject">Subject</label>
-              <select id="subject" class="form-control" style="cursor:pointer">
+              <select id="subject" class="form-control select-pointer">
                 <option value="">Select a topic…</option>
                 <option>Cat Care Question</option>
                 <option>Breed Information</option>
@@ -125,17 +121,14 @@
               <label for="message">Message *</label>
               <textarea id="message" class="form-control" rows="5" placeholder="Tell us what's on your mind…" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:1rem">
-              Send Message 🐾
-            </button>
+            <button type="submit" class="btn btn-primary btn-full">Send Message 🐾</button>
           </form>
 
-          <!-- Success State -->
           <div id="formSuccess" class="form-success">
             <div class="success-icon">🎉</div>
-            <h3 style="color:var(--gold);margin-bottom:0.8rem">Message Sent!</h3>
+            <h3 class="success-result-text">Message Sent!</h3>
             <p>Thank you for reaching out. We'll get back to you within 24–48 hours. In the meantime, feel free to explore our breed guides or take the breed quiz!</p>
-            <div style="display:flex;gap:1rem;justify-content:center;margin-top:2rem;flex-wrap:wrap">
+            <div class="form-success-flex">
               <a href="quiz.html" class="btn btn-primary btn-sm">Take the Quiz</a>
               <a href="breeds.html" class="btn btn-outline btn-sm">Explore Breeds</a>
             </div>
@@ -146,8 +139,8 @@
     </div>
   </section>
 
-  <!-- FAQ Section -->
-  <section class="section" style="padding-top:0">
+  <!-- FAQ -->
+  <section class="section section-no-top">
     <div class="section-inner">
       <div class="section-header reveal">
         <div class="section-tag">Common Questions</div>
@@ -156,40 +149,20 @@
       </div>
       <div class="faq-list reveal">
         <div class="faq-item">
-          <button class="faq-q">
-            Can I submit my cat to the gallery?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a">
-            <p>Absolutely! Send your best photo to hello@furandlearn.com with the subject "Gallery Submission" and a short caption. We review all submissions and feature the best ones in our gallery with full credit to you.</p>
-          </div>
+          <button class="faq-q">Can I submit my cat to the gallery?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Absolutely! Send your best photo to hello@furandlearn.com with the subject "Gallery Submission" and a short caption. We review all submissions and feature the best ones in our gallery with full credit to you.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">
-            I'm a vet — can I contribute content?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a">
-            <p>We'd love to hear from qualified veterinary professionals. Please reach out via the contact form with your credentials and a brief description of what you'd like to contribute. We review all expert contributions before publication.</p>
-          </div>
+          <button class="faq-q">I'm a vet — can I contribute content?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>We'd love to hear from qualified veterinary professionals. Please reach out via the contact form with your credentials and a brief description of what you'd like to contribute. We review all expert contributions before publication.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">
-            Is your content suitable for professional reference?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a">
-            <p>Our care guides are written for general cat owners and reviewed by a qualified vet. They are educational resources, not a substitute for professional veterinary advice. Always consult your vet for medical decisions about your cat.</p>
-          </div>
+          <button class="faq-q">Is your content suitable for professional reference?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Our care guides are written for general cat owners and reviewed by a qualified vet. They are educational resources, not a substitute for professional veterinary advice. Always consult your vet for medical decisions about your cat.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">
-            Do you accept advertising or sponsored content?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a">
-            <p>We maintain strict editorial independence. We don't accept paid placement in our guides, rankings, or recommendations. All content reflects our genuine research and the advice of our veterinary consultant. We may occasionally partner with cat welfare organisations.</p>
-          </div>
+          <button class="faq-q">Do you accept advertising or sponsored content?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>We maintain strict editorial independence. We don't accept paid placement in our guides, rankings, or recommendations. All content reflects our genuine research and the advice of our veterinary consultant. We may occasionally partner with cat welfare organisations.</p></div>
         </div>
       </div>
     </div>

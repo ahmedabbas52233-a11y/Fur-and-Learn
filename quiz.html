@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Take the Fur & Learn Breed Finder Quiz — 5 questions to match you with your perfect cat breed.">
+  <meta name="description" content="Take the Fur &amp; Learn Breed Finder Quiz — 5 questions to match you with your perfect cat breed.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='80' font-size='80'%3E🐱%3C/text%3E%3C/svg%3E">
   <title>Breed Finder Quiz – Fur &amp; Learn</title>
   <link rel="stylesheet" href="styles.css">
@@ -34,39 +34,31 @@
 <main>
   <nav class="breadcrumb"><a href="Catphotoapp.html">🏠 Home</a> / <span>Breed Quiz</span></nav>
 
-  <section class="page-hero" aria-label="Quiz hero">
+  <section class="page-hero">
     <div class="section-tag">🎯 Interactive Tool</div>
     <h1>Find Your Perfect Breed</h1>
     <p>Answer 5 quick questions about your lifestyle and we'll match you with your ideal feline companion.</p>
   </section>
 
-  <section class="section" style="padding-top:1rem">
+  <section class="section section-sm-top">
     <div class="section-inner">
       <div class="quiz-wrap">
 
         <!-- Start Screen -->
-        <div id="quizStart" class="glass-card reveal" style="padding:3rem;text-align:center">
-          <div style="font-size:4rem;margin-bottom:1.5rem">🐾</div>
-          <h2 style="margin-bottom:1rem">Ready to Find Your Match?</h2>
-          <p style="max-width:480px;margin:0 auto 2rem">This quick 5-question quiz analyses your lifestyle, living space, and preferences to recommend the perfect cat breed for you.</p>
-          <div style="display:flex;gap:1.2rem;flex-wrap:wrap;justify-content:center;margin-bottom:2rem">
-            <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.9rem;color:var(--cream-dim)">
-              <span style="color:var(--gold)">✦</span> 5 questions
-            </div>
-            <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.9rem;color:var(--cream-dim)">
-              <span style="color:var(--gold)">✦</span> ~2 minutes
-            </div>
-            <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.9rem;color:var(--cream-dim)">
-              <span style="color:var(--gold)">✦</span> Personalised result
-            </div>
+        <div id="quizStart" class="glass-card quiz-start-card reveal">
+          <div class="quiz-start-icon">🐾</div>
+          <h2 class="mb-md">Ready to Find Your Match?</h2>
+          <p class="mw-md mb-xl">This quick 5-question quiz analyses your lifestyle, living space, and preferences to recommend the perfect cat breed for you.</p>
+          <div class="quiz-meta">
+            <div class="quiz-meta-item"><span class="quiz-meta-bullet">✦</span> 5 questions</div>
+            <div class="quiz-meta-item"><span class="quiz-meta-bullet">✦</span> ~2 minutes</div>
+            <div class="quiz-meta-item"><span class="quiz-meta-bullet">✦</span> Personalised result</div>
           </div>
-          <button class="btn btn-primary" onclick="startQuiz()" style="font-size:1.1rem;padding:1rem 2.5rem">
-            Start the Quiz 🎯
-          </button>
+          <button class="btn btn-primary btn-xl" onclick="startQuiz()">Start the Quiz 🎯</button>
         </div>
 
         <!-- Quiz Box -->
-        <div id="quizBox" class="hidden">
+        <div id="quizBox" class="quiz-hidden">
           <div class="quiz-progress" aria-label="Quiz progress" role="progressbar">
             <div class="quiz-prog-step"></div>
             <div class="quiz-prog-step"></div>
@@ -74,13 +66,13 @@
             <div class="quiz-prog-step"></div>
             <div class="quiz-prog-step"></div>
           </div>
-          <div class="glass-card" style="padding:2.5rem">
-            <div class="quiz-counter" style="font-size:0.82rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.2rem">Question 1 of 5</div>
+          <div class="glass-card quiz-inner-card">
+            <div class="quiz-counter quiz-counter-text">Question 1 of 5</div>
             <h2 class="quiz-question">Loading…</h2>
             <p class="quiz-sub"></p>
-            <div class="quiz-options" style="margin-top:1.5rem"></div>
+            <div class="quiz-options quiz-options-wrap"></div>
             <div class="quiz-nav">
-              <span style="font-size:0.85rem;color:var(--cream-dim)">Select an option to continue →</span>
+              <span class="quiz-hint-text">Select an option to continue →</span>
             </div>
           </div>
         </div>
@@ -93,13 +85,13 @@
   </section>
 
   <!-- How It Works -->
-  <section class="section" style="padding-top:0">
+  <section class="section section-no-top">
     <div class="section-inner">
       <div class="section-header reveal">
         <div class="section-tag">How It Works</div>
         <h2>Smart Matching in 3 Steps</h2>
       </div>
-      <div class="features-grid" style="grid-template-columns:repeat(3,1fr)">
+      <div class="features-grid features-3">
         <div class="feature-card glass-card reveal">
           <span class="feature-icon">📝</span>
           <h3>Answer 5 Questions</h3>
@@ -149,8 +141,5 @@
 
 <button class="back-top" onclick="scrollToTop()" aria-label="Back to top">↑</button>
 <script src="script.js"></script>
-<style>
-  .hidden { display: none !important; }
-</style>
 </body>
 </html>

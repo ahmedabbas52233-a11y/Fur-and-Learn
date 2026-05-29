@@ -1,8 +1,9 @@
 /* ============================================================
    FUR & LEARN — Script v2.0
-   Features: Theme, Nav, Lightbox, Particles, Scroll Reveal,
-             FAQ, Quiz, Comparison, Age Calculator, Tabs, Toast
    ============================================================ */
+
+// Mark HTML as JS-ready immediately so .reveal opacity kicks in
+document.documentElement.classList.add('js-ready');
 
 // ── Theme ─────────────────────────────────────────────────────
 const THEME_KEY = 'fl-theme';
@@ -418,8 +419,8 @@ function startQuiz() {
   currentQ = 0;
   document.getElementById('quizResult')?.classList.remove('show');
   showQuestion(0);
-  document.getElementById('quizBox')?.classList.remove('hidden');
-  document.getElementById('quizStart')?.classList.add('hidden');
+  document.getElementById('quizBox')?.classList.remove('quiz-hidden');
+  document.getElementById('quizStart')?.classList.add('quiz-hidden');
 }
 
 function showQuestion(idx) {
@@ -496,8 +497,8 @@ function showQuizResult() {
 
 function retakeQuiz() {
   document.getElementById('quizResult')?.classList.remove('show');
-  document.getElementById('quizStart')?.classList.remove('hidden');
-  document.getElementById('quizBox')?.classList.add('hidden');
+  document.getElementById('quizStart')?.classList.remove('quiz-hidden');
+  document.getElementById('quizBox')?.classList.add('quiz-hidden');
 }
 
 // ── Contact Form ──────────────────────────────────────────────
@@ -508,7 +509,7 @@ function initContactForm() {
     e.preventDefault();
     form.style.display = 'none';
     document.getElementById('formSuccess')?.classList.add('show');
-    showToast('✅ Message sent! We'll get back to you soon.', 'success');
+    showToast('✅ Message sent! We\u2019ll get back to you soon.', 'success');
   });
 }
 

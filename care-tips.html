@@ -40,15 +40,15 @@
     <p>Everything you need to keep your feline companion healthy, happy, and thriving — organised by topic.</p>
   </section>
 
-  <!-- ── TABBED CARE TIPS ─────────────────────────────────────── -->
-  <section class="section" style="padding-top:1rem">
+  <!-- TABBED CARE TIPS -->
+  <section class="section section-sm-top">
     <div class="section-inner">
       <div class="tabs reveal" role="tablist" aria-label="Care tip categories">
         <button class="tab-btn active" data-tab="nutrition" role="tab" aria-selected="true">🍽️ Nutrition</button>
-        <button class="tab-btn" data-tab="grooming" role="tab" aria-selected="false">🧼 Grooming</button>
-        <button class="tab-btn" data-tab="health" role="tab" aria-selected="false">❤️ Health</button>
+        <button class="tab-btn" data-tab="grooming"   role="tab" aria-selected="false">🧼 Grooming</button>
+        <button class="tab-btn" data-tab="health"     role="tab" aria-selected="false">❤️ Health</button>
         <button class="tab-btn" data-tab="environment" role="tab" aria-selected="false">🏠 Environment</button>
-        <button class="tab-btn" data-tab="behaviour" role="tab" aria-selected="false">🧠 Behaviour</button>
+        <button class="tab-btn" data-tab="behaviour"  role="tab" aria-selected="false">🧠 Behaviour</button>
       </div>
 
       <!-- Nutrition -->
@@ -77,7 +77,7 @@
           <div class="tip-card glass-card danger-card">
             <h3>☠️ Dangerous Foods to Avoid</h3>
             <ul>
-              <li>Chocolate & caffeine — toxic to the nervous system</li>
+              <li>Chocolate &amp; caffeine — toxic to the nervous system</li>
               <li>Onions, garlic, and chives — damage red blood cells</li>
               <li>Grapes and raisins — can cause acute kidney failure</li>
               <li>Xylitol (artificial sweetener) — found in gum, yoghurt, baked goods</li>
@@ -112,7 +112,7 @@
             </ul>
           </div>
           <div class="tip-card glass-card">
-            <h3>✂️ Nails, Ears & Teeth</h3>
+            <h3>✂️ Nails, Ears &amp; Teeth</h3>
             <ul>
               <li>Trim nails every 2–3 weeks using proper cat nail clippers</li>
               <li>Only clip the clear tip — avoid the pink quick</li>
@@ -206,7 +206,7 @@
             </ul>
           </div>
           <div class="tip-card glass-card">
-            <h3>🧸 Enrichment & Play</h3>
+            <h3>🧸 Enrichment &amp; Play</h3>
             <ul>
               <li>Rotate toys weekly to maintain novelty and prevent boredom</li>
               <li>Dedicate 15–20 minutes of interactive play twice daily</li>
@@ -226,7 +226,7 @@
             </ul>
           </div>
           <div class="tip-card glass-card">
-            <h3>🛏️ Rest & Comfort</h3>
+            <h3>🛏️ Rest &amp; Comfort</h3>
             <ul>
               <li>Provide multiple sleeping spots — cats like options and rotation</li>
               <li>Heated cat beds are especially loved by senior cats</li>
@@ -262,7 +262,7 @@
             </ul>
           </div>
           <div class="tip-card glass-card">
-            <h3>😤 Scratching & Spraying</h3>
+            <h3>😤 Scratching &amp; Spraying</h3>
             <ul>
               <li>Provide multiple scratching posts — tall sisal posts are preferred</li>
               <li>Place posts near sleeping areas and high-traffic zones</li>
@@ -286,8 +286,8 @@
     </div>
   </section>
 
-  <!-- ── AGE CALCULATOR ──────────────────────────────────────── -->
-  <section id="calculator" class="section" style="padding-top:0">
+  <!-- AGE CALCULATOR -->
+  <section id="calculator" class="section section-no-top">
     <div class="section-inner">
       <div class="section-header reveal">
         <div class="section-tag">🔢 Interactive Tool</div>
@@ -295,8 +295,8 @@
         <p>How old is your cat in human years? Drag the slider to find out.</p>
       </div>
       <div class="calc-wrap glass-card reveal">
-        <p style="color:var(--cream-dim);font-size:0.9rem;margin-bottom:0.5rem">Move the slider to select your cat's age</p>
-        <span id="catAgeLabel" style="color:var(--gold);font-weight:700;font-size:1.1rem">1 cat year</span>
+        <p class="calc-hint">Move the slider to select your cat's age</p>
+        <span id="catAgeLabel" class="calc-age-label">1 cat year</span>
         <input
           type="range"
           id="catAgeSlider"
@@ -309,15 +309,11 @@
         >
         <div class="calc-display" id="humanAge" aria-live="polite">15 <small>human yrs</small></div>
         <p class="calc-sub" id="ageStage">Kitten — full of chaos and joy 🐾</p>
-        <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--glass-border)">
-          <p style="font-size:0.82rem;color:var(--cream-dim);text-align:center">
-            Based on the AAHA feline life-stage classification. The first year = ~15 human years, second year adds ~9, then each subsequent year ≈ 4 human years.
-          </p>
-        </div>
+        <p class="calc-info-text">Based on the AAHA feline life-stage classification. The first year ≈ 15 human years, the second adds ≈ 9, then each subsequent year ≈ 4 human years.</p>
       </div>
 
       <!-- Life Stages -->
-      <div class="features-grid" style="margin-top:3rem">
+      <div class="features-grid mt-lg">
         <div class="feature-card glass-card reveal">
           <span class="feature-icon">🍼</span>
           <h3>Kitten (0–1 yr)</h3>
