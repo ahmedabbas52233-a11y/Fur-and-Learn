@@ -1,8 +1,20 @@
 # 🐱 Fur & Learn — v2.0
+<p align="left">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" />
+  <img src="https://img.shields.io/badge/Status-Live-brightgreen?style=flat-square" alt="Status" />
+  <img src="https://img.shields.io/badge/Responsive-Yes-blue?style=flat-square" alt="Responsive" />
+</p>
 
 > **The luxury destination for cat lovers.** Interactive breed guides, expert care tips, a 5-question breed finder quiz, photo gallery, cat age calculator, and breed comparison tool — all wrapped in a stunning 3D glassmorphism interface.
 
 ---
+
+## 🔗 Live Demo
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Verccel%20Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://fur-and-learn.vercel.app/)
 
 ## ✨ What's New in v2.0
 
